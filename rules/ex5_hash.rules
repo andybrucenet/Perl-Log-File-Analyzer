@@ -1,0 +1,97 @@
+# ex5_hash.rules
+# Copyright (c) 2001 Andy Bruce
+
+# TO RUN THIS RULE:
+# a. Change to the directory containing logengine.bat
+# b. Run "logengine.bat -r rules/ex5_hash.rules -l logengine.pl"
+# You should see the result:
+#   Found 21 lines matching the first rule.
+#   Found 3 lines matching the second rule.
+#   Data for first rule:
+#     ; no (1145,2670); no (1403,2670); no (1599,2670);
+#     no (2015,2670); no (2108,2670); no (2130,2670);
+#     no (2168,2670); no (2325,2670); no (2330,2670);
+#     no (2332,2670); no (2344,2670); no (2669,2670);
+#     no (2690,3329); no (332,333); no (3327,3329);
+#     no (349,350); no (592,2670); no (728,2670);
+#     no (730,2670); no (798,2670); no (812,2670)
+#   Data for second rule:
+#     ; no (2669,2670); no (332,333); no (349,350)
+
+# This script demonstrates how to take results from matches and store
+# them in persistent variables (in this case, a Perl hash). At this
+# point, you should be able to see that the rules scripts can be far
+# more flexible than any built-in tools.
+[SHARED_CODE]
+matchtwolines_vars=                                                  \
+  %hash_first ;                                                      \
+  %hash_second ;
+
+# FIRST RULE: Match two lines where the first line has "ABR" in it, and
+# the second line has "use|no strict" in it. Note that the two lines do
+# *NOT* need to follow one another consecutively!
+#
+# Also notice that we extract the matched data into an automatic
+# (match-specific) variable named $STRICT_TYPE. This variable
+# has scope only within this match rule (unless exported to another
+# match rule, but that's a different discussion). The variable can be
+# referenced in all BEGIN/END matches following the line where it's
+# defined. It can also be referenced within the ACTION items.
+#
+# The special variables $LINENUMBER_START and $LINENUMBER_RANGE are
+# defined automatically by the logengine. For a complete list of these
+# automatic variables, see the logengine.pl script itself.
+[MATCHTWOLINES_FIRST_RULE]
+BEGIN=ABR
+END=$$STRICT_TYPE(use|no) strict
+Action.Complete=                                                    \
+  # save the match information in a hash by the line number of the  \
+  # first line                                                      \
+  $key = $LINENUMBER_START ;                                        \
+  $entry = {                                                        \
+    RANGE => $LINENUMBER_RANGE,                                     \
+    STRICT_TYPE => $STRICT_TYPE,                                    \
+  } ;                                                               \
+  $hash_first{$key} = $entry ;
+
+# SECOND RULE: Same as the above, but the two lines must be consecutive.
+[MATCHTWOLINES_SECOND_RULE]
+BEGIN=ABR
+MATCH_TIMEOUT=1
+END=$$STRICT_TYPE(use|no) strict
+Action.COMPLETE=                                                    \
+  $key = $LINENUMBER_START ;                                        \
+  $entry = {                                                        \
+    RANGE => $LINENUMBER_RANGE,                                     \
+    STRICT_TYPE => $STRICT_TYPE,                                    \
+  } ;                                                               \
+  $hash_second{$key} = $entry ;
+
+[TERMINATION_CODE]
+hash_term_printHash=                                                \
+  sub hash_term_printHash {                                         \
+    # get hash passed by caller                                     \
+    my( $refHash ) = @_ ;                                           \
+                                                                    \
+    # iterate over the hash items                                   \
+    my $key ;                                                       \
+    foreach $key (sort( keys( %{$refHash} ) )) {                    \
+      # retrieve the embedded hash within the passed hash           \
+      my $entry = $refHash->{$key} ;                                \
+                                                                    \
+      # and print its data                                          \
+      print "; $entry->{STRICT_TYPE} ($entry->{RANGE})" ;           \
+    }                                                               \
+    print "\n" ;                                                    \
+  }
+
+hash_term=                                                          \
+  print "Found " . scalar( keys( %hash_first ) ) . " lines " .      \
+    "matching the first rule.\n" ;                                  \
+  print "Found " . scalar( keys( %hash_second ) ) . " lines " .     \
+    "matching the second rule.\n" ;                                 \
+  print "Data for first rule:\n\t" ;                                \
+  hash_term_printHash( \%hash_first ) ;                             \
+  print "Data for second rule:\n\t" ;                               \
+  hash_term_printHash( \%hash_second ) ;                            \
+

@@ -1,0 +1,24 @@
+# ex1_linecount.rules
+# Copyright (c) 2001 Andy Bruce
+
+# TO RUN THIS RULE:
+# a. Change to the directory containing logengine.bat
+# b. Run "logengine.bat -r rules/ex1_linecount.rules -l logengine.pl"
+# You should see the result "3625 lines in file(s)" after a few seconds.
+
+# This *very simple rule* demonstrates the easiest possible
+# match: a rule to count lines in a file.
+#
+# While such a rule has little value (the "wc" program works
+# faster and more easily), this rule does show how the
+# system works from a basic perspective.
+[SHARED_CODE]
+linecount_globals=$linecount_var ;
+
+[LINECOUNT]
+BEGIN=.*
+Action.complete=++$linecount_var ;
+
+[TERMINATION_CODE]
+linecount_term=print "$linecount_var lines in file(s)\n" ;
+

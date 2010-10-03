@@ -1,0 +1,24 @@
+# ex2_ABRcount.rules
+# Copyright (c) 2001 Andy Bruce
+
+# TO RUN THIS RULE:
+# a. Change to the directory containing logengine.bat
+# b. Run "logengine.bat -r rules/ex2_ABRcount.rules -l logengine.pl"
+# You should see the result "21 ABR lines in file(s)" after a few seconds.
+
+# This rule actually looks for a specific pattern "ABR" in the
+# specified log file(s).
+#
+# While such a rule has little value (the "grep" program works
+# faster and more easily), you should see how to define a simple
+# expression match here.
+[SHARED_CODE]
+ABRcount_globals=$ABRcount_var ;
+
+[ABRCOUNT]
+BEGIN=ABR
+Action.complete=++$ABRcount_var ;
+
+[TERMINATION_CODE]
+ABRcount_term=print "$ABRcount_var ABR lines in file(s)\n" ;
+

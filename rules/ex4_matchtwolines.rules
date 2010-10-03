@@ -1,0 +1,36 @@
+# ex4_matchtwolines.rules
+# Copyright (c) 2001 Andy Bruce
+
+# TO RUN THIS RULE:
+# a. Change to the directory containing logengine.bat
+# b. Run "logengine.bat -r rules/ex4_matchtwolines.rules -l logengine.pl"
+# You should see the result:
+#   21 lines matched first rule
+#   3 lines matched second rule
+
+# This script demonstrates how to match two lines in two separate rules.
+[SHARED_CODE]
+matchtwolines_vars=                                                  \
+  $matchtwolines_first ;                                             \
+  $matchtwolines_second ;
+
+# FIRST RULE: Match two lines where the first line has "ABR" in it, and
+# the second line has "strict" in it. Note that the two lines do
+# *NOT* need to follow one another consecutively!
+[MATCHTWOLINES_FIRST_RULE]
+BEGIN=ABR
+END=strict
+Action.Complete=++$matchtwolines_first ;
+
+# SECOND RULE: Same as the above, but the two lines must be consecutive.
+[MATCHTWOLINES_SECOND_RULE]
+BEGIN=ABR
+MATCH_TIMEOUT=1
+END=strict
+Action.Complete=++$matchtwolines_second ;
+
+[TERMINATION_CODE]
+matchtwolines_term=                                                  \
+  print "$matchtwolines_first lines matched first rule.\n" ;         \
+  print "$matchtwolines_second lines matched second rule.\n" ;
+

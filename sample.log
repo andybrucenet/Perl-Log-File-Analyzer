@@ -1,0 +1,1854 @@
+18:21:24 - SST@001I: May 29 Init 1 Th 27:   Version 00.02.80
+18:21:24 - SST@001I: May 29 Init 1 Th 27:   DbMain: Creating DbServer svrABRUCE1444L
+18:21:25 - SST@001I: May 29 Init 1 Th 27:   DbMain: DbServer thread started.
+18:21:25 - SST@001I: May 29 Init 1 Th 27:   DbMain: Waiting for daemon to initialize...
+18:21:25 - SST@001I: May 29 Init 1 Th 28:   DbServer: Initializing database...
+18:21:25 - SST@001I: May 29 Init 1 Th 28:   DbServer: Connected as user brucea on host 'ABRUCE1444L'
+18:21:25 - SST@001I: May 29 Proc 1 Th 28:   
+         -   DbOracle: Connecting using jdbc:oracle:thin:@ABRUCE1444L:1521:ABRUCE
+18:21:25 - SST@001I: May 29 Init 1 Th 28:   DbServer: Selected database ABRUCE
+18:21:25 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Creating wrapper for Statement 'oracle.jdbc.driver.OracleStatement@6d1da'
+18:21:25 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Creating wrapper for ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@3b625b'
+18:21:25 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Closing ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@3b625b'
+18:21:25 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Closing Statement 'oracle.jdbc.driver.OracleStatement@6d1da'
+18:21:25 - SST@001I: May 29 Init 1 Th 28:   DbServer: Creating dictionary cache
+18:21:26 - SST@001I: May 29 Proc 1 Th 28:    SstDict: Loading dictionary...
+18:21:26 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Creating wrapper for Statement 'oracle.jdbc.driver.OracleStatement@4d2197'
+18:21:26 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Creating wrapper for ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@5878d2'
+18:21:26 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbConnection: Executed Query: (Time ===> 0.01)
+         -     ___> SELECT * FROM Dictionary ORDER BY DictionaryId
+18:21:26 - SST@001I: May 29 Proc 3 Th 28:   
+         -   DbConnection: Parsing for table names: SELECT * FROM Dictionary ORDER BY DictionaryId
+18:21:26 - SST@001I: May 29 Proc 2 Th 23:   XMLLoader:parseAndStore: Number of autofixes = 0
+18:21:26 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Creating wrapper for Statement 'oracle.jdbc.driver.OracleStatement@7bcb70'
+18:21:26 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Creating wrapper for ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@6931d9'
+18:21:26 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbConnection: Executed Query: (Time ===> 0.03)
+         -     ___> Select * from ControlGroup
+18:21:26 - SST@001I: May 29 Proc 3 Th 23:   DbConnection: Parsing for table names: Select * from ControlGroup
+18:21:26 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Closing ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@6931d9'
+18:21:26 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Closing Statement 'oracle.jdbc.driver.OracleStatement@7bcb70'
+18:21:26 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Closing ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@5878d2'
+18:21:26 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Closing Statement 'oracle.jdbc.driver.OracleStatement@4d2197'
+18:21:27 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Creating wrapper for Statement 'oracle.jdbc.driver.OracleStatement@170ae0'
+18:21:27 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Creating wrapper for ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@4c7a98'
+18:21:27 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbConnection: Executed Query: (Time ===> 0.47)
+         -     ___> SELECT * FROM Dictionary ORDER BY Name,FieldName,DictionaryId
+18:21:27 - SST@001I: May 29 Proc 3 Th 28:   
+         -   DbConnection: Parsing for table names: SELECT * FROM Dictionary ORDER BY 
+         -     Name,FieldName,DictionaryId
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Creating wrapper for Statement 'oracle.jdbc.driver.OracleStatement@4a96a'
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Creating wrapper for ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@e920f'
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Closing ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@e920f'
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Closing Statement 'oracle.jdbc.driver.OracleStatement@4a96a'
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Creating wrapper for Statement 'oracle.jdbc.driver.OracleStatement@43e967'
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Creating wrapper for ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@1079ff'
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Closing ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@1079ff'
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Closing Statement 'oracle.jdbc.driver.OracleStatement@43e967'
+18:21:27 - SST@001I: May 29 Proc 3 Th 23:   DbBase: Allocated 1 sequences from 1308 for AlertTemplate
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Creating wrapper for Statement 'oracle.jdbc.driver.OracleStatement@51ac10'
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Creating wrapper for ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@777511'
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Closing ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@777511'
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Closing Statement 'oracle.jdbc.driver.OracleStatement@51ac10'
+18:21:27 - SST@001I: May 29 Proc 3 Th 23:   DbBase: Allocated 1 sequences from 1309 for Alert
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbConnection: Executed Query: (Time ===> 0.01)
+         -     ___> INSERT INTO Alert( AlertId, AlertTemplateId, IsEnabled, AlertType, DataType, Category, 
+         -     IsAModel, ControlGroupId, AssignAll, MgmtPolicyId, ModifiedDate, WhoModified, KeyValues, 
+         -     FatalIsEnabled, FatalTest, FatalTrigger, FatalBefore, FatalAfter, FatalMin, FatalMax, 
+         -     CritIsEnabled, CritTest, CritTrigger, CritBefore, CritAfter, CritMin, CritMax, WarnIsEnabled, 
+         -     WarnTest, WarnTrigger, WarnBefore, WarnAfter, WarnMin, WarnMax, MinorIsEnabled, MinorTest, 
+         -     MinorTrigger, MinorBefore, MinorAfter, MinorMin, MinorMax, HarmIsEnabled, HarmTest, 
+         -     HarmTrigger, HarmBefore, HarmAfter, HarmMin, HarmMax ) VALUES( 1310, 1309, 'T', 0, 'number', 
+         -     'Agent', 'Y', -1, 'Y', NULL, TO_DATE( '29-May-2001 22:21:27', 'DD-MON-YYYY HH24:MI:SS' ), 
+         -     'Installation', '*,*', 'T', '=', '5', 0, 0, 0, 0, 'T', '=', '4', 0, 0, 0, 0, 'T', '=', '3', 0, 
+         -     0, 0, 0, 'T', '=', '2', 0, 0, 0, 0, 'T', '=', '1', 0, 0, 0, 0 )
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Creating wrapper for Statement 'oracle.jdbc.driver.OracleStatement@31f2b4'
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Creating wrapper for ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@3526cf'
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Closing ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@3526cf'
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Closing Statement 'oracle.jdbc.driver.OracleStatement@31f2b4'
+18:21:27 - SST@001I: May 29 Proc 3 Th 23:   DbBase: Allocated 1 sequences from 1310 for Alert
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbConnection: Executed Query: (Time ===> 0.01)
+         -     ___> INSERT INTO Alert( AlertId, AlertTemplateId, IsEnabled, AlertType, DataType, Category, 
+         -     IsAModel, ControlGroupId, AssignAll, MgmtPolicyId, ModifiedDate, WhoModified, KeyValues, 
+         -     FatalIsEnabled, FatalTest, FatalTrigger, FatalBefore, FatalAfter, FatalMin, FatalMax, 
+         -     CritIsEnabled, CritTest, CritTrigger, CritBefore, CritAfter, CritMin, CritMax, WarnIsEnabled, 
+         -     WarnTest, WarnTrigger, WarnBefore, WarnAfter, WarnMin, WarnMax, MinorIsEnabled, MinorTest, 
+         -     MinorTrigger, MinorBefore, MinorAfter, MinorMin, MinorMax, HarmIsEnabled, HarmTest, 
+         -     HarmTrigger, HarmBefore, HarmAfter, HarmMin, HarmMax ) VALUES( 1311, 1309, 'T', 0, 'number', 
+         -     'Agent', 'N', -1, 'Y', NULL, TO_DATE( '29-May-2001 22:21:27', 'DD-MON-YYYY HH24:MI:SS' ), 
+         -     'Installation', '*,*', 'T', '=', '5', 0, 0, 0, 0, 'T', '=', '4', 0, 0, 0, 0, 'T', '=', '3', 0, 
+         -     0, 0, 0, 'T', '=', '2', 0, 0, 0, 0, 'T', '=', '1', 0, 0, 0, 0 )
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   XMLLoader:parseAndStore: Number of alert templates = 11
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Creating wrapper for Statement 'oracle.jdbc.driver.OracleStatement@299f7e'
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Creating wrapper for ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@2631cc'
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Closing ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@2631cc'
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Closing Statement 'oracle.jdbc.driver.OracleStatement@299f7e'
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Creating wrapper for Statement 'oracle.jdbc.driver.OracleStatement@53a9d5'
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Creating wrapper for ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@32e752'
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Closing ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@32e752'
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Closing Statement 'oracle.jdbc.driver.OracleStatement@53a9d5'
+18:21:27 - SST@001I: May 29 Proc 3 Th 23:   DbBase: Allocated 1 sequences from 1311 for AlertTemplate
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Creating wrapper for Statement 'oracle.jdbc.driver.OracleStatement@196b65'
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Creating wrapper for ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@59c8b5'
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Closing ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@59c8b5'
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Closing Statement 'oracle.jdbc.driver.OracleStatement@196b65'
+18:21:27 - SST@001I: May 29 Proc 3 Th 23:   DbBase: Allocated 2 sequences from 1312 for Alert
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbConnection: Executed Query: (Time ===> 0.01)
+         -     ___> INSERT INTO Alert( AlertId, AlertTemplateId, IsEnabled, AlertType, DataType, Category, 
+         -     IsAModel, ControlGroupId, AssignAll, MgmtPolicyId, ModifiedDate, WhoModified, KeyValues, 
+         -     FatalIsEnabled, FatalTest, FatalTrigger, FatalBefore, FatalAfter, FatalMin, FatalMax, 
+         -     CritIsEnabled, CritTest, CritTrigger, CritBefore, CritAfter, CritMin, CritMax, WarnIsEnabled, 
+         -     WarnTest, WarnTrigger, WarnBefore, WarnAfter, WarnMin, WarnMax, MinorIsEnabled, MinorTest, 
+         -     MinorTrigger, MinorBefore, MinorAfter, MinorMin, MinorMax, HarmIsEnabled, HarmTest, 
+         -     HarmTrigger, HarmBefore, HarmAfter, HarmMin, HarmMax ) VALUES( 1313, 1312, 'T', 3, 'number', 
+         -     'System', 'Y', -1, 'Y', NULL, TO_DATE( '29-May-2001 22:21:27', 'DD-MON-YYYY HH24:MI:SS' ), 
+         -     'Installation', '', 'F', '=', 'TRUE', 0, 0, 0, 0, 'F', '=', 'TRUE', 0, 0, 0, 0, 'T', '=', 
+         -     'TRUE', 0, 0, 0, 0, 'F', '=', 'TRUE', 0, 0, 0, 0, 'F', '=', 'TRUE', 0, 0, 0, 0 )
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbConnection: Executed Query: (Time ===> 0.01)
+         -     ___> INSERT INTO Alert( AlertId, AlertTemplateId, IsEnabled, AlertType, DataType, Category, 
+         -     IsAModel, ControlGroupId, AssignAll, MgmtPolicyId, ModifiedDate, WhoModified, KeyValues, 
+         -     FatalIsEnabled, FatalTest, FatalTrigger, FatalBefore, FatalAfter, FatalMin, FatalMax, 
+         -     CritIsEnabled, CritTest, CritTrigger, CritBefore, CritAfter, CritMin, CritMax, WarnIsEnabled, 
+         -     WarnTest, WarnTrigger, WarnBefore, WarnAfter, WarnMin, WarnMax, MinorIsEnabled, MinorTest, 
+         -     MinorTrigger, MinorBefore, MinorAfter, MinorMin, MinorMax, HarmIsEnabled, HarmTest, 
+         -     HarmTrigger, HarmBefore, HarmAfter, HarmMin, HarmMax ) VALUES( 1314, 1312, 'T', 3, 'number', 
+         -     'System', 'N', -1, 'Y', NULL, TO_DATE( '29-May-2001 22:21:27', 'DD-MON-YYYY HH24:MI:SS' ), 
+         -     'Installation', '', 'F', '=', 'TRUE', 0, 0, 0, 0, 'F', '=', 'TRUE', 0, 0, 0, 0, 'T', '=', 
+         -     'TRUE', 0, 0, 0, 0, 'F', '=', 'TRUE', 0, 0, 0, 0, 'F', '=', 'TRUE', 0, 0, 0, 0 )
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Creating wrapper for Statement 'oracle.jdbc.driver.OracleStatement@11a4fb'
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Creating wrapper for ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@66978d'
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Closing ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@66978d'
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Closing Statement 'oracle.jdbc.driver.OracleStatement@11a4fb'
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Creating wrapper for Statement 'oracle.jdbc.driver.OracleStatement@51dcd6'
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Creating wrapper for ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@1ba1d9'
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Closing ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@1ba1d9'
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Closing Statement 'oracle.jdbc.driver.OracleStatement@51dcd6'
+18:21:27 - SST@001I: May 29 Proc 3 Th 23:   DbBase: Allocated 1 sequences from 1314 for AlertTemplate
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Creating wrapper for Statement 'oracle.jdbc.driver.OracleStatement@1e178'
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Creating wrapper for ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@79ac92'
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Closing ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@79ac92'
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Closing Statement 'oracle.jdbc.driver.OracleStatement@1e178'
+18:21:27 - SST@001I: May 29 Proc 3 Th 23:   DbBase: Allocated 2 sequences from 1315 for Alert
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbConnection: Executed Query: (Time ===> 0.0)
+         -     ___> INSERT INTO Alert( AlertId, AlertTemplateId, IsEnabled, AlertType, DataType, Category, 
+         -     IsAModel, ControlGroupId, AssignAll, MgmtPolicyId, ModifiedDate, WhoModified, KeyValues, 
+         -     FatalIsEnabled, FatalTest, FatalTrigger, FatalBefore, FatalAfter, FatalMin, FatalMax, 
+         -     CritIsEnabled, CritTest, CritTrigger, CritBefore, CritAfter, CritMin, CritMax, WarnIsEnabled, 
+         -     WarnTest, WarnTrigger, WarnBefore, WarnAfter, WarnMin, WarnMax, MinorIsEnabled, MinorTest, 
+         -     MinorTrigger, MinorBefore, MinorAfter, MinorMin, MinorMax, HarmIsEnabled, HarmTest, 
+         -     HarmTrigger, HarmBefore, HarmAfter, HarmMin, HarmMax ) VALUES( 1316, 1315, 'T', 3, 'number', 
+         -     'System', 'Y', -1, 'Y', NULL, TO_DATE( '29-May-2001 22:21:27', 'DD-MON-YYYY HH24:MI:SS' ), 
+         -     'Installation', '', 'F', '=', 'TRUE', 0, 0, 0, 0, 'F', '=', 'TRUE', 0, 0, 0, 0, 'T', '=', 
+         -     'TRUE', 0, 0, 0, 0, 'F', '=', 'TRUE', 0, 0, 0, 0, 'F', '=', 'TRUE', 0, 0, 0, 0 )
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbConnection: Executed Query: (Time ===> 0.01)
+         -     ___> INSERT INTO Alert( AlertId, AlertTemplateId, IsEnabled, AlertType, DataType, Category, 
+         -     IsAModel, ControlGroupId, AssignAll, MgmtPolicyId, ModifiedDate, WhoModified, KeyValues, 
+         -     FatalIsEnabled, FatalTest, FatalTrigger, FatalBefore, FatalAfter, FatalMin, FatalMax, 
+         -     CritIsEnabled, CritTest, CritTrigger, CritBefore, CritAfter, CritMin, CritMax, WarnIsEnabled, 
+         -     WarnTest, WarnTrigger, WarnBefore, WarnAfter, WarnMin, WarnMax, MinorIsEnabled, MinorTest, 
+         -     MinorTrigger, MinorBefore, MinorAfter, MinorMin, MinorMax, HarmIsEnabled, HarmTest, 
+         -     HarmTrigger, HarmBefore, HarmAfter, HarmMin, HarmMax ) VALUES( 1317, 1315, 'T', 3, 'number', 
+         -     'System', 'N', -1, 'Y', NULL, TO_DATE( '29-May-2001 22:21:27', 'DD-MON-YYYY HH24:MI:SS' ), 
+         -     'Installation', '', 'F', '=', 'TRUE', 0, 0, 0, 0, 'F', '=', 'TRUE', 0, 0, 0, 0, 'T', '=', 
+         -     'TRUE', 0, 0, 0, 0, 'F', '=', 'TRUE', 0, 0, 0, 0, 'F', '=', 'TRUE', 0, 0, 0, 0 )
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Creating wrapper for Statement 'oracle.jdbc.driver.OracleStatement@24036f'
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Creating wrapper for ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@5d89f9'
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Closing ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@5d89f9'
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Closing Statement 'oracle.jdbc.driver.OracleStatement@24036f'
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Creating wrapper for Statement 'oracle.jdbc.driver.OracleStatement@3c35fd'
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Creating wrapper for ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@7c9d2b'
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Closing ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@7c9d2b'
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Closing Statement 'oracle.jdbc.driver.OracleStatement@3c35fd'
+18:21:27 - SST@001I: May 29 Proc 3 Th 23:   DbBase: Allocated 1 sequences from 1317 for AlertTemplate
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Creating wrapper for Statement 'oracle.jdbc.driver.OracleStatement@12fc02'
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Creating wrapper for ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@5f1ba8'
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Closing ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@5f1ba8'
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Closing Statement 'oracle.jdbc.driver.OracleStatement@12fc02'
+18:21:27 - SST@001I: May 29 Proc 3 Th 23:   DbBase: Allocated 2 sequences from 1318 for Alert
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbConnection: Executed Query: (Time ===> 0.0)
+         -     ___> INSERT INTO Alert( AlertId, AlertTemplateId, IsEnabled, AlertType, DataType, Category, 
+         -     IsAModel, ControlGroupId, AssignAll, MgmtPolicyId, ModifiedDate, WhoModified, KeyValues, 
+         -     FatalIsEnabled, FatalTest, FatalTrigger, FatalBefore, FatalAfter, FatalMin, FatalMax, 
+         -     CritIsEnabled, CritTest, CritTrigger, CritBefore, CritAfter, CritMin, CritMax, WarnIsEnabled, 
+         -     WarnTest, WarnTrigger, WarnBefore, WarnAfter, WarnMin, WarnMax, MinorIsEnabled, MinorTest, 
+         -     MinorTrigger, MinorBefore, MinorAfter, MinorMin, MinorMax, HarmIsEnabled, HarmTest, 
+         -     HarmTrigger, HarmBefore, HarmAfter, HarmMin, HarmMax ) VALUES( 1319, 1318, 'T', 3, 'number', 
+         -     'System', 'Y', -1, 'Y', NULL, TO_DATE( '29-May-2001 22:21:27', 'DD-MON-YYYY HH24:MI:SS' ), 
+         -     'Installation', '', 'F', '=', 'TRUE', 0, 0, 0, 0, 'F', '=', 'TRUE', 0, 0, 0, 0, 'T', '=', 
+         -     'TRUE', 0, 0, 0, 0, 'F', '=', 'TRUE', 0, 0, 0, 0, 'F', '=', 'TRUE', 0, 0, 0, 0 )
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbConnection: Executed Query: (Time ===> 0.0)
+         -     ___> INSERT INTO Alert( AlertId, AlertTemplateId, IsEnabled, AlertType, DataType, Category, 
+         -     IsAModel, ControlGroupId, AssignAll, MgmtPolicyId, ModifiedDate, WhoModified, KeyValues, 
+         -     FatalIsEnabled, FatalTest, FatalTrigger, FatalBefore, FatalAfter, FatalMin, FatalMax, 
+         -     CritIsEnabled, CritTest, CritTrigger, CritBefore, CritAfter, CritMin, CritMax, WarnIsEnabled, 
+         -     WarnTest, WarnTrigger, WarnBefore, WarnAfter, WarnMin, WarnMax, MinorIsEnabled, MinorTest, 
+         -     MinorTrigger, MinorBefore, MinorAfter, MinorMin, MinorMax, HarmIsEnabled, HarmTest, 
+         -     HarmTrigger, HarmBefore, HarmAfter, HarmMin, HarmMax ) VALUES( 1320, 1318, 'T', 3, 'number', 
+         -     'System', 'N', -1, 'Y', NULL, TO_DATE( '29-May-2001 22:21:27', 'DD-MON-YYYY HH24:MI:SS' ), 
+         -     'Installation', '', 'F', '=', 'TRUE', 0, 0, 0, 0, 'F', '=', 'TRUE', 0, 0, 0, 0, 'T', '=', 
+         -     'TRUE', 0, 0, 0, 0, 'F', '=', 'TRUE', 0, 0, 0, 0, 'F', '=', 'TRUE', 0, 0, 0, 0 )
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Creating wrapper for Statement 'oracle.jdbc.driver.OracleStatement@54340c'
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Creating wrapper for ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@251027'
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Closing ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@251027'
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Closing Statement 'oracle.jdbc.driver.OracleStatement@54340c'
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Creating wrapper for Statement 'oracle.jdbc.driver.OracleStatement@790192'
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Creating wrapper for ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@5646a5'
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Closing ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@5646a5'
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Closing Statement 'oracle.jdbc.driver.OracleStatement@790192'
+18:21:27 - SST@001I: May 29 Proc 3 Th 23:   DbBase: Allocated 1 sequences from 1320 for AlertTemplate
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Creating wrapper for Statement 'oracle.jdbc.driver.OracleStatement@1adeb7'
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Creating wrapper for ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@13e8f3'
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Closing ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@13e8f3'
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Closing Statement 'oracle.jdbc.driver.OracleStatement@1adeb7'
+18:21:27 - SST@001I: May 29 Proc 3 Th 23:   DbBase: Allocated 2 sequences from 1321 for Alert
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbConnection: Executed Query: (Time ===> 0.0)
+         -     ___> INSERT INTO Alert( AlertId, AlertTemplateId, IsEnabled, AlertType, DataType, Category, 
+         -     IsAModel, ControlGroupId, AssignAll, MgmtPolicyId, ModifiedDate, WhoModified, KeyValues, 
+         -     FatalIsEnabled, FatalTest, FatalTrigger, FatalBefore, FatalAfter, FatalMin, FatalMax, 
+         -     CritIsEnabled, CritTest, CritTrigger, CritBefore, CritAfter, CritMin, CritMax, WarnIsEnabled, 
+         -     WarnTest, WarnTrigger, WarnBefore, WarnAfter, WarnMin, WarnMax, MinorIsEnabled, MinorTest, 
+         -     MinorTrigger, MinorBefore, MinorAfter, MinorMin, MinorMax, HarmIsEnabled, HarmTest, 
+         -     HarmTrigger, HarmBefore, HarmAfter, HarmMin, HarmMax ) VALUES( 1322, 1321, 'T', 3, 'number', 
+         -     'System', 'Y', -1, 'Y', NULL, TO_DATE( '29-May-2001 22:21:27', 'DD-MON-YYYY HH24:MI:SS' ), 
+         -     'Installation', '', 'F', '=', 'TRUE', 0, 0, 0, 0, 'F', '=', 'TRUE', 0, 0, 0, 0, 'T', '=', 
+         -     'TRUE', 0, 0, 0, 0, 'F', '=', 'TRUE', 0, 0, 0, 0, 'F', '=', 'TRUE', 0, 0, 0, 0 )
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbConnection: Executed Query: (Time ===> 0.01)
+         -     ___> INSERT INTO Alert( AlertId, AlertTemplateId, IsEnabled, AlertType, DataType, Category, 
+         -     IsAModel, ControlGroupId, AssignAll, MgmtPolicyId, ModifiedDate, WhoModified, KeyValues, 
+         -     FatalIsEnabled, FatalTest, FatalTrigger, FatalBefore, FatalAfter, FatalMin, FatalMax, 
+         -     CritIsEnabled, CritTest, CritTrigger, CritBefore, CritAfter, CritMin, CritMax, WarnIsEnabled, 
+         -     WarnTest, WarnTrigger, WarnBefore, WarnAfter, WarnMin, WarnMax, MinorIsEnabled, MinorTest, 
+         -     MinorTrigger, MinorBefore, MinorAfter, MinorMin, MinorMax, HarmIsEnabled, HarmTest, 
+         -     HarmTrigger, HarmBefore, HarmAfter, HarmMin, HarmMax ) VALUES( 1323, 1321, 'T', 3, 'number', 
+         -     'System', 'N', -1, 'Y', NULL, TO_DATE( '29-May-2001 22:21:27', 'DD-MON-YYYY HH24:MI:SS' ), 
+         -     'Installation', '', 'F', '=', 'TRUE', 0, 0, 0, 0, 'F', '=', 'TRUE', 0, 0, 0, 0, 'T', '=', 
+         -     'TRUE', 0, 0, 0, 0, 'F', '=', 'TRUE', 0, 0, 0, 0, 'F', '=', 'TRUE', 0, 0, 0, 0 )
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Creating wrapper for Statement 'oracle.jdbc.driver.OracleStatement@41f227'
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Creating wrapper for ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@11e2c'
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Closing ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@11e2c'
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Closing Statement 'oracle.jdbc.driver.OracleStatement@41f227'
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Creating wrapper for Statement 'oracle.jdbc.driver.OracleStatement@5d3ac0'
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Creating wrapper for ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@3c312f'
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Closing ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@3c312f'
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Closing Statement 'oracle.jdbc.driver.OracleStatement@5d3ac0'
+18:21:27 - SST@001I: May 29 Proc 3 Th 23:   DbBase: Allocated 1 sequences from 1323 for AlertTemplate
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Creating wrapper for Statement 'oracle.jdbc.driver.OracleStatement@24eafa'
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Creating wrapper for ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@3ef987'
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Closing ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@3ef987'
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Closing Statement 'oracle.jdbc.driver.OracleStatement@24eafa'
+18:21:27 - SST@001I: May 29 Proc 3 Th 23:   DbBase: Allocated 2 sequences from 1324 for Alert
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbConnection: Executed Query: (Time ===> 0.01)
+         -     ___> INSERT INTO Alert( AlertId, AlertTemplateId, IsEnabled, AlertType, DataType, Category, 
+         -     IsAModel, ControlGroupId, AssignAll, MgmtPolicyId, ModifiedDate, WhoModified, KeyValues, 
+         -     FatalIsEnabled, FatalTest, FatalTrigger, FatalBefore, FatalAfter, FatalMin, FatalMax, 
+         -     CritIsEnabled, CritTest, CritTrigger, CritBefore, CritAfter, CritMin, CritMax, WarnIsEnabled, 
+         -     WarnTest, WarnTrigger, WarnBefore, WarnAfter, WarnMin, WarnMax, MinorIsEnabled, MinorTest, 
+         -     MinorTrigger, MinorBefore, MinorAfter, MinorMin, MinorMax, HarmIsEnabled, HarmTest, 
+         -     HarmTrigger, HarmBefore, HarmAfter, HarmMin, HarmMax ) VALUES( 1325, 1324, 'T', 3, 'number', 
+         -     'Security', 'Y', -1, 'Y', NULL, TO_DATE( '29-May-2001 22:21:27', 'DD-MON-YYYY HH24:MI:SS' ), 
+         -     'Installation', '', 'F', '=', 'TRUE', 0, 0, 0, 0, 'F', '=', 'TRUE', 0, 0, 0, 0, 'T', '=', 
+         -     'TRUE', 0, 0, 0, 0, 'F', '=', 'TRUE', 0, 0, 0, 0, 'F', '=', 'TRUE', 0, 0, 0, 0 )
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbConnection: Executed Query: (Time ===> 0.0)
+         -     ___> INSERT INTO Alert( AlertId, AlertTemplateId, IsEnabled, AlertType, DataType, Category, 
+         -     IsAModel, ControlGroupId, AssignAll, MgmtPolicyId, ModifiedDate, WhoModified, KeyValues, 
+         -     FatalIsEnabled, FatalTest, FatalTrigger, FatalBefore, FatalAfter, FatalMin, FatalMax, 
+         -     CritIsEnabled, CritTest, CritTrigger, CritBefore, CritAfter, CritMin, CritMax, WarnIsEnabled, 
+         -     WarnTest, WarnTrigger, WarnBefore, WarnAfter, WarnMin, WarnMax, MinorIsEnabled, MinorTest, 
+         -     MinorTrigger, MinorBefore, MinorAfter, MinorMin, MinorMax, HarmIsEnabled, HarmTest, 
+         -     HarmTrigger, HarmBefore, HarmAfter, HarmMin, HarmMax ) VALUES( 1326, 1324, 'T', 3, 'number', 
+         -     'Security', 'N', -1, 'Y', NULL, TO_DATE( '29-May-2001 22:21:27', 'DD-MON-YYYY HH24:MI:SS' ), 
+         -     'Installation', '', 'F', '=', 'TRUE', 0, 0, 0, 0, 'F', '=', 'TRUE', 0, 0, 0, 0, 'F', '=', 
+         -     'TRUE', 0, 0, 0, 0, 'F', '=', 'TRUE', 0, 0, 0, 0, 'T', '=', 'TRUE', 0, 0, 0, 0 )
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Creating wrapper for Statement 'oracle.jdbc.driver.OracleStatement@a39de'
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Creating wrapper for ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@5d45d9'
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Closing ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@5d45d9'
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Closing Statement 'oracle.jdbc.driver.OracleStatement@a39de'
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Creating wrapper for Statement 'oracle.jdbc.driver.OracleStatement@35dc95'
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Creating wrapper for ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@24ea85'
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Closing ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@24ea85'
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Closing Statement 'oracle.jdbc.driver.OracleStatement@35dc95'
+18:21:27 - SST@001I: May 29 Proc 3 Th 23:   DbBase: Allocated 1 sequences from 1326 for AlertTemplate
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Creating wrapper for Statement 'oracle.jdbc.driver.OracleStatement@a0a36'
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Creating wrapper for ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@24614c'
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Closing ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@24614c'
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Closing Statement 'oracle.jdbc.driver.OracleStatement@a0a36'
+18:21:27 - SST@001I: May 29 Proc 3 Th 23:   DbBase: Allocated 2 sequences from 1327 for Alert
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbConnection: Executed Query: (Time ===> 0.02)
+         -     ___> INSERT INTO Alert( AlertId, AlertTemplateId, IsEnabled, AlertType, DataType, Category, 
+         -     IsAModel, ControlGroupId, AssignAll, MgmtPolicyId, ModifiedDate, WhoModified, KeyValues, 
+         -     FatalIsEnabled, FatalTest, FatalTrigger, FatalBefore, FatalAfter, FatalMin, FatalMax, 
+         -     CritIsEnabled, CritTest, CritTrigger, CritBefore, CritAfter, CritMin, CritMax, WarnIsEnabled, 
+         -     WarnTest, WarnTrigger, WarnBefore, WarnAfter, WarnMin, WarnMax, MinorIsEnabled, MinorTest, 
+         -     MinorTrigger, MinorBefore, MinorAfter, MinorMin, MinorMax, HarmIsEnabled, HarmTest, 
+         -     HarmTrigger, HarmBefore, HarmAfter, HarmMin, HarmMax ) VALUES( 1328, 1327, 'T', 3, 'number', 
+         -     'Security', 'Y', -1, 'Y', NULL, TO_DATE( '29-May-2001 22:21:27', 'DD-MON-YYYY HH24:MI:SS' ), 
+         -     'Installation', '', 'F', '=', 'TRUE', 0, 0, 0, 0, 'F', '=', 'TRUE', 0, 0, 0, 0, 'T', '=', 
+         -     'TRUE', 0, 0, 0, 0, 'F', '=', 'TRUE', 0, 0, 0, 0, 'F', '=', 'TRUE', 0, 0, 0, 0 )
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbConnection: Executed Query: (Time ===> 0.01)
+         -     ___> INSERT INTO Alert( AlertId, AlertTemplateId, IsEnabled, AlertType, DataType, Category, 
+         -     IsAModel, ControlGroupId, AssignAll, MgmtPolicyId, ModifiedDate, WhoModified, KeyValues, 
+         -     FatalIsEnabled, FatalTest, FatalTrigger, FatalBefore, FatalAfter, FatalMin, FatalMax, 
+         -     CritIsEnabled, CritTest, CritTrigger, CritBefore, CritAfter, CritMin, CritMax, WarnIsEnabled, 
+         -     WarnTest, WarnTrigger, WarnBefore, WarnAfter, WarnMin, WarnMax, MinorIsEnabled, MinorTest, 
+         -     MinorTrigger, MinorBefore, MinorAfter, MinorMin, MinorMax, HarmIsEnabled, HarmTest, 
+         -     HarmTrigger, HarmBefore, HarmAfter, HarmMin, HarmMax ) VALUES( 1329, 1327, 'T', 3, 'number', 
+         -     'Security', 'N', -1, 'Y', NULL, TO_DATE( '29-May-2001 22:21:27', 'DD-MON-YYYY HH24:MI:SS' ), 
+         -     'Installation', '', 'F', '=', 'TRUE', 0, 0, 0, 0, 'F', '=', 'TRUE', 0, 0, 0, 0, 'T', '=', 
+         -     'TRUE', 0, 0, 0, 0, 'F', '=', 'TRUE', 0, 0, 0, 0, 'F', '=', 'TRUE', 0, 0, 0, 0 )
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Creating wrapper for Statement 'oracle.jdbc.driver.OracleStatement@305fcb'
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Creating wrapper for ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@6136f0'
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Closing ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@6136f0'
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Closing Statement 'oracle.jdbc.driver.OracleStatement@305fcb'
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Creating wrapper for Statement 'oracle.jdbc.driver.OracleStatement@1018b'
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Creating wrapper for ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@c6cbc'
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Closing ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@c6cbc'
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Closing Statement 'oracle.jdbc.driver.OracleStatement@1018b'
+18:21:27 - SST@001I: May 29 Proc 3 Th 23:   DbBase: Allocated 1 sequences from 1329 for AlertTemplate
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Creating wrapper for Statement 'oracle.jdbc.driver.OracleStatement@b23cf'
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Creating wrapper for ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@5c2a25'
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Closing ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@5c2a25'
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Closing Statement 'oracle.jdbc.driver.OracleStatement@b23cf'
+18:21:27 - SST@001I: May 29 Proc 3 Th 23:   DbBase: Allocated 2 sequences from 1330 for Alert
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbConnection: Executed Query: (Time ===> 0.01)
+         -     ___> INSERT INTO Alert( AlertId, AlertTemplateId, IsEnabled, AlertType, DataType, Category, 
+         -     IsAModel, ControlGroupId, AssignAll, MgmtPolicyId, ModifiedDate, WhoModified, KeyValues, 
+         -     FatalIsEnabled, FatalTest, FatalTrigger, FatalBefore, FatalAfter, FatalMin, FatalMax, 
+         -     CritIsEnabled, CritTest, CritTrigger, CritBefore, CritAfter, CritMin, CritMax, WarnIsEnabled, 
+         -     WarnTest, WarnTrigger, WarnBefore, WarnAfter, WarnMin, WarnMax, MinorIsEnabled, MinorTest, 
+         -     MinorTrigger, MinorBefore, MinorAfter, MinorMin, MinorMax, HarmIsEnabled, HarmTest, 
+         -     HarmTrigger, HarmBefore, HarmAfter, HarmMin, HarmMax ) VALUES( 1331, 1330, 'T', 3, 'number', 
+         -     'Security', 'Y', -1, 'Y', NULL, TO_DATE( '29-May-2001 22:21:27', 'DD-MON-YYYY HH24:MI:SS' ), 
+         -     'Installation', '', 'F', '=', 'TRUE', 0, 0, 0, 0, 'F', '=', 'TRUE', 0, 0, 0, 0, 'T', '=', 
+         -     'TRUE', 0, 0, 0, 0, 'F', '=', 'TRUE', 0, 0, 0, 0, 'F', '=', 'TRUE', 0, 0, 0, 0 )
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbConnection: Executed Query: (Time ===> 0.01)
+         -     ___> INSERT INTO Alert( AlertId, AlertTemplateId, IsEnabled, AlertType, DataType, Category, 
+         -     IsAModel, ControlGroupId, AssignAll, MgmtPolicyId, ModifiedDate, WhoModified, KeyValues, 
+         -     FatalIsEnabled, FatalTest, FatalTrigger, FatalBefore, FatalAfter, FatalMin, FatalMax, 
+         -     CritIsEnabled, CritTest, CritTrigger, CritBefore, CritAfter, CritMin, CritMax, WarnIsEnabled, 
+         -     WarnTest, WarnTrigger, WarnBefore, WarnAfter, WarnMin, WarnMax, MinorIsEnabled, MinorTest, 
+         -     MinorTrigger, MinorBefore, MinorAfter, MinorMin, MinorMax, HarmIsEnabled, HarmTest, 
+         -     HarmTrigger, HarmBefore, HarmAfter, HarmMin, HarmMax ) VALUES( 1332, 1330, 'T', 3, 'number', 
+         -     'Security', 'N', -1, 'Y', NULL, TO_DATE( '29-May-2001 22:21:27', 'DD-MON-YYYY HH24:MI:SS' ), 
+         -     'Installation', '', 'F', '=', 'TRUE', 0, 0, 0, 0, 'F', '=', 'TRUE', 0, 0, 0, 0, 'T', '=', 
+         -     'TRUE', 0, 0, 0, 0, 'F', '=', 'TRUE', 0, 0, 0, 0, 'F', '=', 'TRUE', 0, 0, 0, 0 )
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Creating wrapper for Statement 'oracle.jdbc.driver.OracleStatement@7d4662'
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Creating wrapper for ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@17e615'
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Closing ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@17e615'
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Closing Statement 'oracle.jdbc.driver.OracleStatement@7d4662'
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Creating wrapper for Statement 'oracle.jdbc.driver.OracleStatement@fa0d1'
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Creating wrapper for ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@706f6'
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Closing ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@706f6'
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Closing Statement 'oracle.jdbc.driver.OracleStatement@fa0d1'
+18:21:27 - SST@001I: May 29 Proc 3 Th 23:   DbBase: Allocated 1 sequences from 1332 for AlertTemplate
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Creating wrapper for Statement 'oracle.jdbc.driver.OracleStatement@5e7497'
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Creating wrapper for ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@388122'
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Closing ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@388122'
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Closing Statement 'oracle.jdbc.driver.OracleStatement@5e7497'
+18:21:27 - SST@001I: May 29 Proc 3 Th 23:   DbBase: Allocated 2 sequences from 1333 for Alert
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbConnection: Executed Query: (Time ===> 0.01)
+         -     ___> INSERT INTO Alert( AlertId, AlertTemplateId, IsEnabled, AlertType, DataType, Category, 
+         -     IsAModel, ControlGroupId, AssignAll, MgmtPolicyId, ModifiedDate, WhoModified, KeyValues, 
+         -     FatalIsEnabled, FatalTest, FatalTrigger, FatalBefore, FatalAfter, FatalMin, FatalMax, 
+         -     CritIsEnabled, CritTest, CritTrigger, CritBefore, CritAfter, CritMin, CritMax, WarnIsEnabled, 
+         -     WarnTest, WarnTrigger, WarnBefore, WarnAfter, WarnMin, WarnMax, MinorIsEnabled, MinorTest, 
+         -     MinorTrigger, MinorBefore, MinorAfter, MinorMin, MinorMax, HarmIsEnabled, HarmTest, 
+         -     HarmTrigger, HarmBefore, HarmAfter, HarmMin, HarmMax ) VALUES( 1334, 1333, 'T', 3, 'number', 
+         -     'Security', 'Y', -1, 'Y', NULL, TO_DATE( '29-May-2001 22:21:27', 'DD-MON-YYYY HH24:MI:SS' ), 
+         -     'Installation', '', 'F', '=', 'TRUE', 0, 0, 0, 0, 'F', '=', 'TRUE', 0, 0, 0, 0, 'T', '=', 
+         -     'TRUE', 0, 0, 0, 0, 'F', '=', 'TRUE', 0, 0, 0, 0, 'F', '=', 'TRUE', 0, 0, 0, 0 )
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbConnection: Executed Query: (Time ===> 0.01)
+         -     ___> INSERT INTO Alert( AlertId, AlertTemplateId, IsEnabled, AlertType, DataType, Category, 
+         -     IsAModel, ControlGroupId, AssignAll, MgmtPolicyId, ModifiedDate, WhoModified, KeyValues, 
+         -     FatalIsEnabled, FatalTest, FatalTrigger, FatalBefore, FatalAfter, FatalMin, FatalMax, 
+         -     CritIsEnabled, CritTest, CritTrigger, CritBefore, CritAfter, CritMin, CritMax, WarnIsEnabled, 
+         -     WarnTest, WarnTrigger, WarnBefore, WarnAfter, WarnMin, WarnMax, MinorIsEnabled, MinorTest, 
+         -     MinorTrigger, MinorBefore, MinorAfter, MinorMin, MinorMax, HarmIsEnabled, HarmTest, 
+         -     HarmTrigger, HarmBefore, HarmAfter, HarmMin, HarmMax ) VALUES( 1335, 1333, 'T', 3, 'number', 
+         -     'Security', 'N', -1, 'Y', NULL, TO_DATE( '29-May-2001 22:21:27', 'DD-MON-YYYY HH24:MI:SS' ), 
+         -     'Installation', '', 'F', '=', 'TRUE', 0, 0, 0, 0, 'F', '=', 'TRUE', 0, 0, 0, 0, 'T', '=', 
+         -     'TRUE', 0, 0, 0, 0, 'F', '=', 'TRUE', 0, 0, 0, 0, 'F', '=', 'TRUE', 0, 0, 0, 0 )
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Creating wrapper for Statement 'oracle.jdbc.driver.OracleStatement@6937f9'
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Creating wrapper for ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@59e5ad'
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Closing ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@59e5ad'
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Closing Statement 'oracle.jdbc.driver.OracleStatement@6937f9'
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Creating wrapper for Statement 'oracle.jdbc.driver.OracleStatement@d0b0f'
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Creating wrapper for ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@5144a4'
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Closing ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@5144a4'
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Closing Statement 'oracle.jdbc.driver.OracleStatement@d0b0f'
+18:21:27 - SST@001I: May 29 Proc 3 Th 23:   DbBase: Allocated 1 sequences from 1335 for AlertTemplate
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Creating wrapper for Statement 'oracle.jdbc.driver.OracleStatement@4ad437'
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Creating wrapper for ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@329572'
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Closing ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@329572'
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Closing Statement 'oracle.jdbc.driver.OracleStatement@4ad437'
+18:21:27 - SST@001I: May 29 Proc 3 Th 23:   DbBase: Allocated 2 sequences from 1336 for Alert
+18:21:27 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbConnection: Executed Query: (Time ===> 0.01)
+         -     ___> INSERT INTO Alert( AlertId, AlertTemplateId, IsEnabled, AlertType, DataType, Category, 
+         -     IsAModel, ControlGroupId, AssignAll, MgmtPolicyId, ModifiedDate, WhoModified, KeyValues, 
+         -     FatalIsEnabled, FatalTest, FatalTrigger, FatalBefore, FatalAfter, FatalMin, FatalMax, 
+         -     CritIsEnabled, CritTest, CritTrigger, CritBefore, CritAfter, CritMin, CritMax, WarnIsEnabled, 
+         -     WarnTest, WarnTrigger, WarnBefore, WarnAfter, WarnMin, WarnMax, MinorIsEnabled, MinorTest, 
+         -     MinorTrigger, MinorBefore, MinorAfter, MinorMin, MinorMax, HarmIsEnabled, HarmTest, 
+         -     HarmTrigger, HarmBefore, HarmAfter, HarmMin, HarmMax ) VALUES( 1337, 1336, 'T', 3, 'number', 
+         -     'System', 'Y', -1, 'Y', NULL, TO_DATE( '29-May-2001 22:21:27', 'DD-MON-YYYY HH24:MI:SS' ), 
+         -     'Installation', '', 'F', '=', 'TRUE', 0, 0, 0, 0, 'F', '=', 'TRUE', 0, 0, 0, 0, 'T', '=', 
+         -     'TRUE', 0, 0, 0, 0, 'F', '=', 'TRUE', 0, 0, 0, 0, 'F', '=', 'TRUE', 0, 0, 0, 0 )
+18:21:28 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbConnection: Executed Query: (Time ===> 0.01)
+         -     ___> INSERT INTO Alert( AlertId, AlertTemplateId, IsEnabled, AlertType, DataType, Category, 
+         -     IsAModel, ControlGroupId, AssignAll, MgmtPolicyId, ModifiedDate, WhoModified, KeyValues, 
+         -     FatalIsEnabled, FatalTest, FatalTrigger, FatalBefore, FatalAfter, FatalMin, FatalMax, 
+         -     CritIsEnabled, CritTest, CritTrigger, CritBefore, CritAfter, CritMin, CritMax, WarnIsEnabled, 
+         -     WarnTest, WarnTrigger, WarnBefore, WarnAfter, WarnMin, WarnMax, MinorIsEnabled, MinorTest, 
+         -     MinorTrigger, MinorBefore, MinorAfter, MinorMin, MinorMax, HarmIsEnabled, HarmTest, 
+         -     HarmTrigger, HarmBefore, HarmAfter, HarmMin, HarmMax ) VALUES( 1338, 1336, 'T', 3, 'number', 
+         -     'System', 'N', -1, 'Y', NULL, TO_DATE( '29-May-2001 22:21:27', 'DD-MON-YYYY HH24:MI:SS' ), 
+         -     'Installation', '', 'F', '=', 'TRUE', 0, 0, 0, 0, 'F', '=', 'TRUE', 0, 0, 0, 0, 'T', '=', 
+         -     'TRUE', 0, 0, 0, 0, 'F', '=', 'TRUE', 0, 0, 0, 0, 'F', '=', 'TRUE', 0, 0, 0, 0 )
+18:21:28 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Creating wrapper for Statement 'oracle.jdbc.driver.OracleStatement@320399'
+18:21:28 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Creating wrapper for ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@a3a1d'
+18:21:28 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Closing ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@a3a1d'
+18:21:28 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Closing Statement 'oracle.jdbc.driver.OracleStatement@320399'
+18:21:28 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Creating wrapper for Statement 'oracle.jdbc.driver.OracleStatement@6b98c3'
+18:21:28 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Creating wrapper for ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@7a54fe'
+18:21:28 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Closing ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@7a54fe'
+18:21:28 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Closing Statement 'oracle.jdbc.driver.OracleStatement@6b98c3'
+18:21:28 - SST@001I: May 29 Proc 3 Th 23:   DbBase: Allocated 1 sequences from 1338 for AlertTemplate
+18:21:28 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Creating wrapper for Statement 'oracle.jdbc.driver.OracleStatement@7b6763'
+18:21:28 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Creating wrapper for ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@40b8fd'
+18:21:28 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Closing ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@40b8fd'
+18:21:28 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Closing Statement 'oracle.jdbc.driver.OracleStatement@7b6763'
+18:21:28 - SST@001I: May 29 Proc 3 Th 23:   DbBase: Allocated 2 sequences from 1339 for Alert
+18:21:28 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbConnection: Executed Query: (Time ===> 0.0)
+         -     ___> INSERT INTO Alert( AlertId, AlertTemplateId, IsEnabled, AlertType, DataType, Category, 
+         -     IsAModel, ControlGroupId, AssignAll, MgmtPolicyId, ModifiedDate, WhoModified, KeyValues, 
+         -     FatalIsEnabled, FatalTest, FatalTrigger, FatalBefore, FatalAfter, FatalMin, FatalMax, 
+         -     CritIsEnabled, CritTest, CritTrigger, CritBefore, CritAfter, CritMin, CritMax, WarnIsEnabled, 
+         -     WarnTest, WarnTrigger, WarnBefore, WarnAfter, WarnMin, WarnMax, MinorIsEnabled, MinorTest, 
+         -     MinorTrigger, MinorBefore, MinorAfter, MinorMin, MinorMax, HarmIsEnabled, HarmTest, 
+         -     HarmTrigger, HarmBefore, HarmAfter, HarmMin, HarmMax ) VALUES( 1340, 1339, 'T', 3, 'number', 
+         -     'System', 'Y', -1, 'Y', NULL, TO_DATE( '29-May-2001 22:21:28', 'DD-MON-YYYY HH24:MI:SS' ), 
+         -     'Installation', '', 'F', '=', 'TRUE', 0, 0, 0, 0, 'F', '=', 'TRUE', 0, 0, 0, 0, 'T', '=', 
+         -     'TRUE', 0, 0, 0, 0, 'F', '=', 'TRUE', 0, 0, 0, 0, 'F', '=', 'TRUE', 0, 0, 0, 0 )
+18:21:28 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbConnection: Executed Query: (Time ===> 0.0)
+         -     ___> INSERT INTO Alert( AlertId, AlertTemplateId, IsEnabled, AlertType, DataType, Category, 
+         -     IsAModel, ControlGroupId, AssignAll, MgmtPolicyId, ModifiedDate, WhoModified, KeyValues, 
+         -     FatalIsEnabled, FatalTest, FatalTrigger, FatalBefore, FatalAfter, FatalMin, FatalMax, 
+         -     CritIsEnabled, CritTest, CritTrigger, CritBefore, CritAfter, CritMin, CritMax, WarnIsEnabled, 
+         -     WarnTest, WarnTrigger, WarnBefore, WarnAfter, WarnMin, WarnMax, MinorIsEnabled, MinorTest, 
+         -     MinorTrigger, MinorBefore, MinorAfter, MinorMin, MinorMax, HarmIsEnabled, HarmTest, 
+         -     HarmTrigger, HarmBefore, HarmAfter, HarmMin, HarmMax ) VALUES( 1341, 1339, 'T', 3, 'number', 
+         -     'System', 'N', -1, 'Y', NULL, TO_DATE( '29-May-2001 22:21:28', 'DD-MON-YYYY HH24:MI:SS' ), 
+         -     'Installation', '', 'F', '=', 'TRUE', 0, 0, 0, 0, 'F', '=', 'TRUE', 0, 0, 0, 0, 'T', '=', 
+         -     'TRUE', 0, 0, 0, 0, 'F', '=', 'TRUE', 0, 0, 0, 0, 'F', '=', 'TRUE', 0, 0, 0, 0 )
+18:21:28 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Creating wrapper for Statement 'oracle.jdbc.driver.OracleStatement@4fdf11'
+18:21:28 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Creating wrapper for ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@3e0369'
+18:21:28 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Closing ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@3e0369'
+18:21:28 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Closing Statement 'oracle.jdbc.driver.OracleStatement@4fdf11'
+18:21:28 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Creating wrapper for Statement 'oracle.jdbc.driver.OracleStatement@7800db'
+18:21:28 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Creating wrapper for ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@5364'
+18:21:28 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Closing ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@5364'
+18:21:28 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Closing Statement 'oracle.jdbc.driver.OracleStatement@7800db'
+18:21:28 - SST@001I: May 29 Proc 3 Th 23:   DbBase: Allocated 1 sequences from 1341 for AlertTemplate
+18:21:28 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Creating wrapper for Statement 'oracle.jdbc.driver.OracleStatement@57bf4c'
+18:21:28 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Creating wrapper for ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@5056de'
+18:21:28 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Closing ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@5056de'
+18:21:28 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbJdbcExecResult: Closing Statement 'oracle.jdbc.driver.OracleStatement@57bf4c'
+18:21:28 - SST@001I: May 29 Proc 3 Th 23:   DbBase: Allocated 2 sequences from 1342 for Alert
+18:21:28 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbConnection: Executed Query: (Time ===> 0.0)
+         -     ___> INSERT INTO Alert( AlertId, AlertTemplateId, IsEnabled, AlertType, DataType, Category, 
+         -     IsAModel, ControlGroupId, AssignAll, MgmtPolicyId, ModifiedDate, WhoModified, KeyValues, 
+         -     FatalIsEnabled, FatalTest, FatalTrigger, FatalBefore, FatalAfter, FatalMin, FatalMax, 
+         -     CritIsEnabled, CritTest, CritTrigger, CritBefore, CritAfter, CritMin, CritMax, WarnIsEnabled, 
+         -     WarnTest, WarnTrigger, WarnBefore, WarnAfter, WarnMin, WarnMax, MinorIsEnabled, MinorTest, 
+         -     MinorTrigger, MinorBefore, MinorAfter, MinorMin, MinorMax, HarmIsEnabled, HarmTest, 
+         -     HarmTrigger, HarmBefore, HarmAfter, HarmMin, HarmMax ) VALUES( 1343, 1342, 'T', 3, 'number', 
+         -     'System', 'Y', -1, 'Y', NULL, TO_DATE( '29-May-2001 22:21:28', 'DD-MON-YYYY HH24:MI:SS' ), 
+         -     'Installation', '', 'F', '=', 'TRUE', 0, 0, 0, 0, 'F', '=', 'TRUE', 0, 0, 0, 0, 'T', '=', 
+         -     'TRUE', 0, 0, 0, 0, 'F', '=', 'TRUE', 0, 0, 0, 0, 'F', '=', 'TRUE', 0, 0, 0, 0 )
+18:21:28 - SST@001I: May 29 Proc 2 Th 23:   
+         -   DbConnection: Executed Query: (Time ===> 0.01)
+         -     ___> INSERT INTO Alert( AlertId, AlertTemplateId, IsEnabled, AlertType, DataType, Category, 
+         -     IsAModel, ControlGroupId, AssignAll, MgmtPolicyId, ModifiedDate, WhoModified, KeyValues, 
+         -     FatalIsEnabled, FatalTest, FatalTrigger, FatalBefore, FatalAfter, FatalMin, FatalMax, 
+         -     CritIsEnabled, CritTest, CritTrigger, CritBefore, CritAfter, CritMin, CritMax, WarnIsEnabled, 
+         -     WarnTest, WarnTrigger, WarnBefore, WarnAfter, WarnMin, WarnMax, MinorIsEnabled, MinorTest, 
+         -     MinorTrigger, MinorBefore, MinorAfter, MinorMin, MinorMax, HarmIsEnabled, HarmTest, 
+         -     HarmTrigger, HarmBefore, HarmAfter, HarmMin, HarmMax ) VALUES( 1344, 1342, 'T', 3, 'number', 
+         -     'System', 'N', -1, 'Y', NULL, TO_DATE( '29-May-2001 22:21:28', 'DD-MON-YYYY HH24:MI:SS' ), 
+         -     'Installation', '', 'F', '=', 'TRUE', 0, 0, 0, 0, 'F', '=', 'TRUE', 0, 0, 0, 0, 'T', '=', 
+         -     'TRUE', 0, 0, 0, 0, 'F', '=', 'TRUE', 0, 0, 0, 0, 'F', '=', 'TRUE', 0, 0, 0, 0 )
+18:21:28 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Closing ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@4c7a98'
+18:21:28 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Closing Statement 'oracle.jdbc.driver.OracleStatement@170ae0'
+18:21:28 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Creating wrapper for Statement 'oracle.jdbc.driver.OracleStatement@5cb6b4'
+18:21:28 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Creating wrapper for ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@5f1c48'
+18:21:28 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbConnection: Executed Query: (Time ===> 0.16)
+         -     ___> SELECT * FROM Dictionary ORDER BY Name,DictionaryId
+18:21:28 - SST@001I: May 29 Proc 3 Th 28:   
+         -   DbConnection: Parsing for table names: SELECT * FROM Dictionary ORDER BY Name,DictionaryId
+18:21:28 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Closing ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@5f1c48'
+18:21:28 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Closing Statement 'oracle.jdbc.driver.OracleStatement@5cb6b4'
+18:21:28 - SST@001I: May 29 Proc 1 Th 28:    SstDict: Sorting dictionary...
+18:21:28 - SST@001I: May 29 Proc 1 Th 28:    SstDict: Loading TABLES table...
+18:21:28 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Creating wrapper for Statement 'oracle.jdbc.driver.OracleStatement@39ea58'
+18:21:28 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Creating wrapper for ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@486cdd'
+18:21:28 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbConnection: Executed Query: (Time ===> 0.01)
+         -     ___> SELECT * FROM Tables
+18:21:28 - SST@001I: May 29 Proc 3 Th 28:   DbConnection: Parsing for table names: SELECT * FROM Tables
+18:21:28 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Closing ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@486cdd'
+18:21:28 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Closing Statement 'oracle.jdbc.driver.OracleStatement@39ea58'
+18:21:29 - SST@001I: May 29 Init 1 Th 28:   DbServer: Compiling database rollup rules...
+18:21:29 - SST@001I: May 29 Proc 1 Th 28:    Rollup: Loading all rules
+18:21:29 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Creating wrapper for Statement 'oracle.jdbc.driver.OracleStatement@1650d6'
+18:21:29 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Creating wrapper for ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@1532fc'
+18:21:29 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbConnection: Executed Query: (Time ===> 0.01)
+         -     ___> SELECT * FROM TableRule WHERE Type='S' OR Type='I'
+18:21:29 - SST@001I: May 29 Proc 3 Th 28:   
+         -   DbConnection: Parsing for table names: SELECT * FROM TableRule WHERE Type='S' OR Type='I'
+18:21:29 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Closing ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@1532fc'
+18:21:29 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Closing Statement 'oracle.jdbc.driver.OracleStatement@1650d6'
+18:21:29 - SST@001I: May 29 Init 1 Th 28:   DbServer: Compiling database summarization rules...
+18:21:29 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Creating wrapper for Statement 'oracle.jdbc.driver.OracleStatement@40890f'
+18:21:29 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Creating wrapper for ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@666d83'
+18:21:29 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbConnection: Executed Query: (Time ===> 0.01)
+         -     ___> SELECT * FROM Tables  WHERE Name='LclSumryData'
+18:21:29 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Closing ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@666d83'
+18:21:29 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Closing Statement 'oracle.jdbc.driver.OracleStatement@40890f'
+18:21:29 - SST@001I: May 29 Proc 4 Th 28:   DbConnection: Did not find a row for ACTION_LOOKUP
+18:21:29 - SST@001I: May 29 Proc 4 Th 28:   DsMain: For table LclSumryData, ERROR = No data.
+18:21:29 - SST@001I: May 29 Proc 4 Th 28:   
+         -   DsMain: Dictionary out of sync for table LclSumryData for requesting node
+18:21:29 - SST@001I: May 29 Proc 1 Th 28:   
+         -   DbServer: Creating and/or modifying local summary data table to version 1.0.000
+18:21:29 - SST@001I: May 29 Proc 4 Th 28:   DsMain: Synchronizing dictionary for table LclSumryData
+18:21:29 - SST@001I: May 29 Proc 9 Th 29:   Created Voyager server socket on port 30728
+18:21:30 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Creating wrapper for Statement 'oracle.jdbc.driver.OracleStatement@6b93c5'
+18:21:30 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Creating wrapper for ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@328980'
+18:21:30 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbConnection: Executed Query: (Time ===> 0.01)
+         -     ___> SELECT * FROM Tables  WHERE Name='LclSumryData'
+18:21:30 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Closing ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@328980'
+18:21:30 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Closing Statement 'oracle.jdbc.driver.OracleStatement@6b93c5'
+18:21:30 - SST@001I: May 29 Proc 4 Th 28:   DbConnection: Did not find a row for ACTION_LOOKUP
+18:21:30 - SST@001I: May 29 Proc 9 Th 29:   Created TCP server socket on port 5799
+18:21:30 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbConnection: Executed Query: (Time ===> 0.18)
+         -     ___> DELETE FROM Sequence WHERE SeqName='LclSumryData'|^~|^~|DROP TABLE LclSumryData
+18:21:30 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbConnection: Executed Query: (Time ===> 0.07)
+         -     ___> CREATE TABLE LclSumryData( LclSumryDataId int, Name VARCHAR( 32 ), LastUpdateDate date, 
+         -     LastUpdateTime VARCHAR2(8) )
+18:21:30 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbConnection: Executed Query: (Time ===> 0.031)
+         -     ___> DELETE FROM Sequence WHERE SeqName='LclSumryData'|^~|^~|INSERT INTO Sequence( SeqName, 
+         -     SeqValue ) VALUES ( 'LclSumryData', 5000 )
+18:21:30 - SST@001I: May 29 Proc 3 Th 28:   DsTableWhacker: Updating support tables for LclSumryData
+18:21:30 - SST@001I: May 29 Proc 3 Th 28:   DsTableWhacker: Updating Dictionary table
+18:21:30 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Creating wrapper for Statement 'oracle.jdbc.driver.OracleStatement@4562c5'
+18:21:30 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Creating wrapper for ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@577c5e'
+18:21:30 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbConnection: Executed Query: (Time ===> 0.01)
+         -     ___> SELECT * FROM Dictionary  WHERE Name='LclSumryData' AND FieldName='LclSumryDataId'
+18:21:30 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Closing ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@577c5e'
+18:21:30 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Closing Statement 'oracle.jdbc.driver.OracleStatement@4562c5'
+18:21:30 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Creating wrapper for Statement 'oracle.jdbc.driver.OracleStatement@2631c2'
+18:21:30 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Creating wrapper for ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@ce796'
+18:21:30 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbConnection: Executed Query: (Time ===> 0.0)
+         -     ___> SELECT * FROM Dictionary  WHERE Name='LclSumryData' AND FieldName='Name'
+18:21:30 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Closing ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@ce796'
+18:21:30 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Closing Statement 'oracle.jdbc.driver.OracleStatement@2631c2'
+18:21:30 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Creating wrapper for Statement 'oracle.jdbc.driver.OracleStatement@384ed5'
+18:21:30 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Creating wrapper for ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@3f8cd5'
+18:21:30 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbConnection: Executed Query: (Time ===> 0.0)
+         -     ___> SELECT * FROM Dictionary  WHERE Name='LclSumryData' AND FieldName='LastUpdateDate'
+18:21:30 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Closing ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@3f8cd5'
+18:21:30 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Closing Statement 'oracle.jdbc.driver.OracleStatement@384ed5'
+18:21:30 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Creating wrapper for Statement 'oracle.jdbc.driver.OracleStatement@370648'
+18:21:30 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Creating wrapper for ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@7d9cd5'
+18:21:30 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbConnection: Executed Query: (Time ===> 0.01)
+         -     ___> SELECT * FROM Dictionary  WHERE Name='LclSumryData' AND FieldName='LastUpdateTime'
+18:21:30 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Closing ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@7d9cd5'
+18:21:30 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Closing Statement 'oracle.jdbc.driver.OracleStatement@370648'
+18:21:30 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Creating wrapper for Statement 'oracle.jdbc.driver.OracleStatement@426c8f'
+18:21:30 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Creating wrapper for ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@65394b'
+18:21:30 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Closing ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@65394b'
+18:21:30 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Closing Statement 'oracle.jdbc.driver.OracleStatement@426c8f'
+18:21:30 - SST@001I: May 29 Proc 3 Th 28:   DbBase: Allocated 4 sequences from 1344 for Dictionary
+18:21:30 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbConnection: Executed Query: (Time ===> 0.02)
+         -     ___> INSERT INTO Dictionary( DictionaryId, Name, FieldName, KeyField, IsIdentity, Updatable, 
+         -     Required, Version, GUIType, GUIName, FieldType, FieldLength, RealTime, GUIPanel, GUIGroup ) 
+         -     VALUES( 1345, 'LclSumryData', 'LclSumryDataId', 1, 1, 0, 0, '', '', '', 'int', 4, 'n', '', '' )
+18:21:30 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbConnection: Executed Query: (Time ===> 0.04)
+         -     ___> INSERT INTO Dictionary( DictionaryId, Name, FieldName, KeyField, IsIdentity, Updatable, 
+         -     Required, Version, GUIType, GUIName, FieldType, FieldLength, RealTime, GUIPanel, GUIGroup ) 
+         -     VALUES( 1346, 'LclSumryData', 'Name', 1, 0, 0, 0, '', '', '', 'string', 32, 'n', '', '' )
+18:21:30 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbConnection: Executed Query: (Time ===> 0.04)
+         -     ___> INSERT INTO Dictionary( DictionaryId, Name, FieldName, KeyField, IsIdentity, Updatable, 
+         -     Required, Version, GUIType, GUIName, FieldType, FieldLength, RealTime, GUIPanel, GUIGroup ) 
+         -     VALUES( 1347, 'LclSumryData', 'LastUpdateDate', 0, 0, 1, 0, '', '', '', 'date', 11, 'n', '', 
+         -     '' )
+18:21:30 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbConnection: Executed Query: (Time ===> 0.06)
+         -     ___> INSERT INTO Dictionary( DictionaryId, Name, FieldName, KeyField, IsIdentity, Updatable, 
+         -     Required, Version, GUIType, GUIName, FieldType, FieldLength, RealTime, GUIPanel, GUIGroup ) 
+         -     VALUES( 1348, 'LclSumryData', 'LastUpdateTime', 0, 0, 1, 0, '', '', '', 'time', 8, 'n', '', '' 
+         -     )
+18:21:30 - SST@001I: May 29 Proc 3 Th 28:   DsTableWhacker: Updating Tables table
+18:21:30 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Creating wrapper for Statement 'oracle.jdbc.driver.OracleStatement@1722c9'
+18:21:30 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Creating wrapper for ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@6ce26e'
+18:21:30 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbConnection: Executed Query: (Time ===> 0.0)
+         -     ___> SELECT * FROM Tables  WHERE Name='LclSumryData'
+18:21:30 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Closing ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@6ce26e'
+18:21:30 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Closing Statement 'oracle.jdbc.driver.OracleStatement@1722c9'
+18:21:30 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Creating wrapper for Statement 'oracle.jdbc.driver.OracleStatement@ca8ac'
+18:21:30 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Creating wrapper for ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@15c5ec'
+18:21:30 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Closing ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@15c5ec'
+18:21:30 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Closing Statement 'oracle.jdbc.driver.OracleStatement@ca8ac'
+18:21:30 - SST@001I: May 29 Proc 3 Th 28:   DbBase: Allocated 1 sequences from 1348 for Tables
+18:21:30 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbConnection: Executed Query: (Time ===> 0.03)
+         -     ___> INSERT INTO Tables( TablesId, Name, DisplayName, AdminParent, Parent, ViewByNames, 
+         -     ViewBySelect, ViewByWhere, MenuWhenFolder, MenuWhenItem, OSClass, DualType, Category, Type, 
+         -     Version, Grouping, RealTime, UpdateDate, UpdateTime ) VALUES( 1349, 'LclSumryData', NULL, 
+         -     NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Resource', '1.0.000', 'N', 'N', 
+         -     TO_DATE( '29-May-2001 22:21:30', 'DD-MON-YYYY HH24:MI:SS' ), '22213000' )
+18:21:30 - SST@001I: May 29 Proc 1 Th 28:   DbServer: Local summary data table modification successful
+18:21:30 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Creating wrapper for Statement 'oracle.jdbc.driver.OracleStatement@4dba53'
+18:21:30 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Creating wrapper for ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@3de21'
+18:21:30 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbConnection: Executed Query: (Time ===> 0.0)
+         -     ___> SELECT * FROM TableRule
+18:21:30 - SST@001I: May 29 Proc 3 Th 28:   DbConnection: Parsing for table names: SELECT * FROM TableRule
+18:21:30 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Closing ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@3de21'
+18:21:30 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Closing Statement 'oracle.jdbc.driver.OracleStatement@4dba53'
+18:21:30 - SST@001I: May 29 Init 1 Th 28:   DbServer: Database summarization will occur every 3600 seconds
+18:21:30 - SST@001I: May 29 Proc 1 Th 30:   DbServerSummarizer: Performing summarization
+18:21:30 - SST@001I: May 29 Proc 1 Th 30:   DbServerSummarizer: Summarization complete in 0 millis
+18:21:31 - SST@001I: May 29 Proc 2 Th 29:   
+         -   ProductPopulator: Populating Product table from root: 
+         -     e:\ecc_viewINT\ecc_inf\media_rep\remoteinstall
+18:21:31 - SST@001I: May 29 Proc 2 Th 29:   ProductPopulator: Finished find
+18:21:31 - SST@001I: May 29 Proc 2 Th 29:   
+         -   DbJdbcExecResult: Creating wrapper for Statement 'oracle.jdbc.driver.OracleStatement@622c75'
+18:21:31 - SST@001I: May 29 Proc 2 Th 29:   
+         -   DbJdbcExecResult: Creating wrapper for ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@54eeb5'
+18:21:31 - SST@001I: May 29 Proc 2 Th 29:   
+         -   DbConnection: Executed Query: (Time ===> 0.01)
+         -     ___> SELECT * FROM Product
+18:21:31 - SST@001I: May 29 Proc 3 Th 29:   DbConnection: Parsing for table names: SELECT * FROM Product
+18:21:31 - SST@001I: May 29 Proc 2 Th 29:   
+         -   DbJdbcExecResult: Closing ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@54eeb5'
+18:21:31 - SST@001I: May 29 Proc 2 Th 29:   
+         -   DbJdbcExecResult: Closing Statement 'oracle.jdbc.driver.OracleStatement@622c75'
+18:21:31 - SST@001I: May 29 Proc 2 Th 29:   
+         -   DbJdbcExecResult: Creating wrapper for Statement 'oracle.jdbc.driver.OracleStatement@4bd4f7'
+18:21:31 - SST@001I: May 29 Proc 2 Th 29:   
+         -   DbJdbcExecResult: Creating wrapper for ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@ade7e'
+18:21:31 - SST@001I: May 29 Proc 2 Th 29:   
+         -   DbConnection: Executed Query: (Time ===> 0.01)
+         -     ___> SELECT * FROM PRODUCT
+18:21:31 - SST@001I: May 29 Proc 3 Th 29:   DbConnection: Parsing for table names: SELECT * FROM PRODUCT
+18:21:31 - SST@001I: May 29 Proc 2 Th 29:   
+         -   DbJdbcExecResult: Closing ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@ade7e'
+18:21:31 - SST@001I: May 29 Proc 2 Th 29:   
+         -   DbJdbcExecResult: Closing Statement 'oracle.jdbc.driver.OracleStatement@4bd4f7'
+18:21:32 - SST@001I: May 29 Init 1 Th 28:   Server: Compiling consolidated background reports...
+18:21:32 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Creating wrapper for Statement 'oracle.jdbc.driver.OracleStatement@72f0d0'
+18:21:32 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Creating wrapper for ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@201e8a'
+18:21:32 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbConnection: Executed Query: (Time ===> 0.01)
+         -     ___> SELECT * FROM RptQuery WHERE RptQueryId<>0
+18:21:32 - SST@001I: May 29 Proc 3 Th 28:   
+         -   DbConnection: Parsing for table names: SELECT * FROM RptQuery WHERE RptQueryId<>0
+18:21:32 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Closing ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@201e8a'
+18:21:32 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Closing Statement 'oracle.jdbc.driver.OracleStatement@72f0d0'
+18:21:32 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Creating wrapper for Statement 'oracle.jdbc.driver.OracleStatement@2697a1'
+18:21:32 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Creating wrapper for ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@2cd728'
+18:21:32 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbConnection: Executed Query: (Time ===> 0.01)
+         -     ___> SELECT * FROM RptSchedule WHERE RptScheduleId<>0
+18:21:32 - SST@001I: May 29 Proc 3 Th 28:   
+         -   DbConnection: Parsing for table names: SELECT * FROM RptSchedule WHERE RptScheduleId<>0
+18:21:32 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Closing ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@2cd728'
+18:21:32 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Closing Statement 'oracle.jdbc.driver.OracleStatement@2697a1'
+18:21:32 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Creating wrapper for Statement 'oracle.jdbc.driver.OracleStatement@1e5cf0'
+18:21:32 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Creating wrapper for ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@67c6fd'
+18:21:32 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbConnection: Executed Query: (Time ===> 0.01)
+         -     ___> SELECT * FROM RptDef WHERE RptDefId<>0
+18:21:32 - SST@001I: May 29 Proc 3 Th 28:   
+         -   DbConnection: Parsing for table names: SELECT * FROM RptDef WHERE RptDefId<>0
+18:21:32 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Closing ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@67c6fd'
+18:21:32 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Closing Statement 'oracle.jdbc.driver.OracleStatement@1e5cf0'
+18:21:32 - SST@001I: May 29 Proc 1 Th 28:    Reports: Compiling report 'All Alerts'
+18:21:32 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Creating wrapper for Statement 'oracle.jdbc.driver.OracleStatement@599277'
+18:21:32 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Creating wrapper for ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@1eef2c'
+18:21:32 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbConnection: Executed Query: (Time ===> 0.01)
+         -     ___> SELECT * FROM RptPanel WHERE RptDefId=1231
+18:21:32 - SST@001I: May 29 Proc 3 Th 28:   
+         -   DbConnection: Parsing for table names: SELECT * FROM RptPanel WHERE RptDefId=1231
+18:21:32 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Closing ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@1eef2c'
+18:21:32 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Closing Statement 'oracle.jdbc.driver.OracleStatement@599277'
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Panel Compiler: All Alerts.Test0: AlertByDateView.ALERTDATE assumed to be from a VIEW
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Panel Compiler: All Alerts.Test0: AlertByDateView.HOST assumed to be from a VIEW
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Panel Compiler: All Alerts.Test0: AlertByDateView.SEVERITY assumed to be from a VIEW
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Panel Compiler: All Alerts.Test0: AlertByDateView.MESSAGE assumed to be from a VIEW
+18:21:33 - SST@001I: May 29 Proc 1 Th 28:    Reports: Compiling report 'Asset Report'
+18:21:33 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Creating wrapper for Statement 'oracle.jdbc.driver.OracleStatement@15470e'
+18:21:33 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Creating wrapper for ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@6bf4ff'
+18:21:33 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbConnection: Executed Query: (Time ===> 0.01)
+         -     ___> SELECT * FROM RptPanel WHERE RptDefId=1233
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   DbConnection: Parsing for table names: SELECT * FROM RptPanel WHERE RptDefId=1233
+18:21:33 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Closing ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@6bf4ff'
+18:21:33 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Closing Statement 'oracle.jdbc.driver.OracleStatement@15470e'
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Panel Compiler: Asset Report.Test0: view_asset.OSLEVEL assumed to be from a VIEW
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Panel Compiler: Asset Report.Test0: view_asset.HOSTNAME assumed to be from a VIEW
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Panel Compiler: Asset Report.Test0: view_asset.HOSTTYPE assumed to be from a VIEW
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Panel Compiler: Asset Report.Test0: view_asset.VENDOR assumed to be from a VIEW
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Panel Compiler: Asset Report.Test0: view_asset.OSNAME assumed to be from a VIEW
+18:21:33 - SST@001I: May 29 Proc 1 Th 28:    Reports: Compiling report 'DBStorageSummaryByHostRpt'
+18:21:33 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Creating wrapper for Statement 'oracle.jdbc.driver.OracleStatement@21b42f'
+18:21:33 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Creating wrapper for ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@396ef7'
+18:21:33 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbConnection: Executed Query: (Time ===> 0.01)
+         -     ___> SELECT * FROM RptPanel WHERE RptDefId=1235
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   DbConnection: Parsing for table names: SELECT * FROM RptPanel WHERE RptDefId=1235
+18:21:33 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Closing ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@396ef7'
+18:21:33 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Closing Statement 'oracle.jdbc.driver.OracleStatement@21b42f'
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Panel Compiler: DBStorageSummaryByHostRpt.Test0: REPORTONEVIEW.HOST assumed to be from a VIEW
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Note: panel DBStorageSummaryByHostRpt.Test0: SELECT clause entry 'Host' not in 'table.col' format
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Panel Compiler: DBStorageSummaryByHostRpt.Test0: REPORTONEVIEW.INSTANCE assumed to be from a VIEW
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Note: panel DBStorageSummaryByHostRpt.Test0: SELECT clause entry 'Instance' not in 'table.col' 
+         -     format
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Panel Compiler: DBStorageSummaryByHostRpt.Test0: REPORTONEVIEW.TOTALSTORAGE assumed to be from a 
+         -     VIEW
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Note: panel DBStorageSummaryByHostRpt.Test0: SELECT clause entry 'Total' not in 'table.col' 
+         -     format
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Note: panel DBStorageSummaryByHostRpt.Test0: SELECT clause entry 'Storage' not in 'table.col' 
+         -     format
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Panel Compiler: DBStorageSummaryByHostRpt.Test0: REPORTONEVIEW.TOTALLOGBYSTORAGE assumed to be 
+         -     from a VIEW
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Note: panel DBStorageSummaryByHostRpt.Test0: SELECT clause entry 'Total' not in 'table.col' 
+         -     format
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Note: panel DBStorageSummaryByHostRpt.Test0: SELECT clause entry 'Log' not in 'table.col' format
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Note: panel DBStorageSummaryByHostRpt.Test0: SELECT clause entry 'By' not in 'table.col' format
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Note: panel DBStorageSummaryByHostRpt.Test0: SELECT clause entry 'Storage' not in 'table.col' 
+         -     format
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Panel Compiler: DBStorageSummaryByHostRpt.Test0: REPORTONEVIEW.TOTALDATASTORAGE assumed to be 
+         -     from a VIEW
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Note: panel DBStorageSummaryByHostRpt.Test0: SELECT clause entry 'Total' not in 'table.col' 
+         -     format
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Note: panel DBStorageSummaryByHostRpt.Test0: SELECT clause entry 'Data' not in 'table.col' format
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Note: panel DBStorageSummaryByHostRpt.Test0: SELECT clause entry 'Storage' not in 'table.col' 
+         -     format
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Panel Compiler: DBStorageSummaryByHostRpt.Test0: REPORTONEVIEW.PCTUNALLOCATEDDATASTORAGE assumed 
+         -     to be from a VIEW
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Note: panel DBStorageSummaryByHostRpt.Test0: SELECT clause entry 'Percent' not in 'table.col' 
+         -     format
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Note: panel DBStorageSummaryByHostRpt.Test0: SELECT clause entry 'Unalloc' not in 'table.col' 
+         -     format
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Note: panel DBStorageSummaryByHostRpt.Test0: SELECT clause entry 'Data' not in 'table.col' format
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Note: panel DBStorageSummaryByHostRpt.Test0: SELECT clause entry 'Storage' not in 'table.col' 
+         -     format
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Panel Compiler: DBStorageSummaryByHostRpt.Test0: REPORTONEVIEW.UNALLOCATEDGB assumed to be from 
+         -     a VIEW
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Note: panel DBStorageSummaryByHostRpt.Test0: SELECT clause entry 'Unalloc' not in 'table.col' 
+         -     format
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Note: panel DBStorageSummaryByHostRpt.Test0: SELECT clause entry 'GB' not in 'table.col' format
+18:21:33 - SST@001I: May 29 Proc 1 Th 28:    Reports: Compiling report 'Data File Storage'
+18:21:33 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Creating wrapper for Statement 'oracle.jdbc.driver.OracleStatement@2422f6'
+18:21:33 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Creating wrapper for ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@51cdf7'
+18:21:33 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbConnection: Executed Query: (Time ===> 0.02)
+         -     ___> SELECT * FROM RptPanel WHERE RptDefId=1237
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   DbConnection: Parsing for table names: SELECT * FROM RptPanel WHERE RptDefId=1237
+18:21:33 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Closing ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@51cdf7'
+18:21:33 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Closing Statement 'oracle.jdbc.driver.OracleStatement@2422f6'
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Panel Compiler: Data File Storage.Test0: REPORTFOURVIEW.UNALLOCATEDGB assumed to be from a VIEW
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Note: panel Data File Storage.Test0: SELECT clause entry 'Unallocated' not in 'table.col' format
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Note: panel Data File Storage.Test0: SELECT clause entry 'GB' not in 'table.col' format
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Panel Compiler: Data File Storage.Test0: REPORTFOURVIEW.TABLESPACE assumed to be from a VIEW
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Note: panel Data File Storage.Test0: SELECT clause entry 'TableSpace' not in 'table.col' format
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Panel Compiler: Data File Storage.Test0: REPORTFOURVIEW.INSTANCE assumed to be from a VIEW
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Note: panel Data File Storage.Test0: SELECT clause entry 'Instance' not in 'table.col' format
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Panel Compiler: Data File Storage.Test0: REPORTFOURVIEW.FILENAME assumed to be from a VIEW
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Note: panel Data File Storage.Test0: SELECT clause entry 'File' not in 'table.col' format
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Note: panel Data File Storage.Test0: SELECT clause entry 'Name' not in 'table.col' format
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Panel Compiler: Data File Storage.Test0: REPORTFOURVIEW.TOTALSTORAGE assumed to be from a VIEW
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Note: panel Data File Storage.Test0: SELECT clause entry 'Total' not in 'table.col' format
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Note: panel Data File Storage.Test0: SELECT clause entry 'Storage' not in 'table.col' format
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Panel Compiler: Data File Storage.Test0: REPORTFOURVIEW.PCTUNALLOCATEDSTORAGE assumed to be from 
+         -     a VIEW
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Note: panel Data File Storage.Test0: SELECT clause entry 'Pct' not in 'table.col' format
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Note: panel Data File Storage.Test0: SELECT clause entry 'Unallocated' not in 'table.col' format
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Note: panel Data File Storage.Test0: SELECT clause entry 'Storage' not in 'table.col' format
+18:21:33 - SST@001I: May 29 Proc 1 Th 28:    Reports: Compiling report 'Database Storage Summary By Host'
+18:21:33 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Creating wrapper for Statement 'oracle.jdbc.driver.OracleStatement@292ba7'
+18:21:33 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Creating wrapper for ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@711e0f'
+18:21:33 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbConnection: Executed Query: (Time ===> 0.01)
+         -     ___> SELECT * FROM RptPanel WHERE RptDefId=1239
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   DbConnection: Parsing for table names: SELECT * FROM RptPanel WHERE RptDefId=1239
+18:21:33 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Closing ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@711e0f'
+18:21:33 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Closing Statement 'oracle.jdbc.driver.OracleStatement@292ba7'
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Panel Compiler: Database Storage Summary By Host.Test0: REPORTONEVIEW.HOST assumed to be from a 
+         -     VIEW
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Note: panel Database Storage Summary By Host.Test0: SELECT clause entry 'Host' not in 
+         -     'table.col' format
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Panel Compiler: Database Storage Summary By Host.Test0: REPORTONEVIEW.INSTANCE assumed to be 
+         -     from a VIEW
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Note: panel Database Storage Summary By Host.Test0: SELECT clause entry 'Instance' not in 
+         -     'table.col' format
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Panel Compiler: Database Storage Summary By Host.Test0: REPORTONEVIEW.TOTALSTORAGE assumed to be 
+         -     from a VIEW
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Note: panel Database Storage Summary By Host.Test0: SELECT clause entry 'Total' not in 
+         -     'table.col' format
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Note: panel Database Storage Summary By Host.Test0: SELECT clause entry 'Storage' not in 
+         -     'table.col' format
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Panel Compiler: Database Storage Summary By Host.Test0: REPORTONEVIEW.TOTALLOGBYSTORAGE assumed 
+         -     to be from a VIEW
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Note: panel Database Storage Summary By Host.Test0: SELECT clause entry 'Total' not in 
+         -     'table.col' format
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Note: panel Database Storage Summary By Host.Test0: SELECT clause entry 'Log' not in 'table.col' 
+         -     format
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Note: panel Database Storage Summary By Host.Test0: SELECT clause entry 'By' not in 'table.col' 
+         -     format
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Note: panel Database Storage Summary By Host.Test0: SELECT clause entry 'Storage' not in 
+         -     'table.col' format
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Panel Compiler: Database Storage Summary By Host.Test0: REPORTONEVIEW.TOTALDATASTORAGE assumed 
+         -     to be from a VIEW
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Note: panel Database Storage Summary By Host.Test0: SELECT clause entry 'Total' not in 
+         -     'table.col' format
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Note: panel Database Storage Summary By Host.Test0: SELECT clause entry 'Data' not in 
+         -     'table.col' format
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Note: panel Database Storage Summary By Host.Test0: SELECT clause entry 'Storage' not in 
+         -     'table.col' format
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Panel Compiler: Database Storage Summary By Host.Test0: REPORTONEVIEW.PCTUNALLOCATEDDATASTORAGE 
+         -     assumed to be from a VIEW
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Note: panel Database Storage Summary By Host.Test0: SELECT clause entry 'Percent' not in 
+         -     'table.col' format
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Note: panel Database Storage Summary By Host.Test0: SELECT clause entry 'Unalloc' not in 
+         -     'table.col' format
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Note: panel Database Storage Summary By Host.Test0: SELECT clause entry 'Data' not in 
+         -     'table.col' format
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Note: panel Database Storage Summary By Host.Test0: SELECT clause entry 'Storage' not in 
+         -     'table.col' format
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Panel Compiler: Database Storage Summary By Host.Test0: REPORTONEVIEW.UNALLOCATEDGB assumed to 
+         -     be from a VIEW
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Note: panel Database Storage Summary By Host.Test0: SELECT clause entry 'Unalloc' not in 
+         -     'table.col' format
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Note: panel Database Storage Summary By Host.Test0: SELECT clause entry 'GB' not in 'table.col' 
+         -     format
+18:21:33 - SST@001I: May 29 Proc 1 Th 28:    Reports: Compiling report 'Storage By Object'
+18:21:33 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Creating wrapper for Statement 'oracle.jdbc.driver.OracleStatement@251312'
+18:21:33 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Creating wrapper for ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@fb397'
+18:21:33 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbConnection: Executed Query: (Time ===> 0.01)
+         -     ___> SELECT * FROM RptPanel WHERE RptDefId=1242
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   DbConnection: Parsing for table names: SELECT * FROM RptPanel WHERE RptDefId=1242
+18:21:33 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Closing ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@fb397'
+18:21:33 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Closing Statement 'oracle.jdbc.driver.OracleStatement@251312'
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Panel Compiler: Storage By Object.Test0: REPORTFIVEVIEW.UNALLOCATEDGB assumed to be from a VIEW
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Note: panel Storage By Object.Test0: SELECT clause entry 'Unallocated' not in 'table.col' format
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Note: panel Storage By Object.Test0: SELECT clause entry 'GB' not in 'table.col' format
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Panel Compiler: Storage By Object.Test0: REPORTFIVEVIEW.INSTANCE assumed to be from a VIEW
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Note: panel Storage By Object.Test0: SELECT clause entry 'Instance' not in 'table.col' format
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Panel Compiler: Storage By Object.Test0: REPORTFIVEVIEW.TABLESPACE assumed to be from a VIEW
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Note: panel Storage By Object.Test0: SELECT clause entry 'TableSpace' not in 'table.col' format
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Panel Compiler: Storage By Object.Test0: REPORTFIVEVIEW.OBJECTNAME assumed to be from a VIEW
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Note: panel Storage By Object.Test0: SELECT clause entry 'Object' not in 'table.col' format
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Note: panel Storage By Object.Test0: SELECT clause entry 'Name' not in 'table.col' format
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Panel Compiler: Storage By Object.Test0: REPORTFIVEVIEW.PCTUNALLOCATEDSTORAGE assumed to be from 
+         -     a VIEW
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Note: panel Storage By Object.Test0: SELECT clause entry 'Pct' not in 'table.col' format
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Note: panel Storage By Object.Test0: SELECT clause entry 'Unallocated' not in 'table.col' format
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Note: panel Storage By Object.Test0: SELECT clause entry 'Storage' not in 'table.col' format
+18:21:33 - SST@001I: May 29 Proc 1 Th 28:    Reports: Compiling report 'File Systems'
+18:21:33 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Creating wrapper for Statement 'oracle.jdbc.driver.OracleStatement@57b39f'
+18:21:33 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Creating wrapper for ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@51918a'
+18:21:33 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbConnection: Executed Query: (Time ===> 0.01)
+         -     ___> SELECT * FROM RptPanel WHERE RptDefId=1244
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   DbConnection: Parsing for table names: SELECT * FROM RptPanel WHERE RptDefId=1244
+18:21:33 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Closing ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@51918a'
+18:21:33 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Closing Statement 'oracle.jdbc.driver.OracleStatement@57b39f'
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Panel Compiler: File Systems.Test0: FileSystemView.FREEINODES assumed to be from a VIEW
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Panel Compiler: File Systems.Test0: FileSystemView.HOST assumed to be from a VIEW
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Panel Compiler: File Systems.Test0: FileSystemView.FILESYSTEM assumed to be from a VIEW
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Panel Compiler: File Systems.Test0: FileSystemView.LASTUPDATE assumed to be from a VIEW
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Panel Compiler: File Systems.Test0: FileSystemView.TOTALINODES assumed to be from a VIEW
+18:21:33 - SST@001I: May 29 Proc 1 Th 28:    Reports: Compiling report 'Host Generic Reports'
+18:21:33 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Creating wrapper for Statement 'oracle.jdbc.driver.OracleStatement@2a10fc'
+18:21:33 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Creating wrapper for ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@412332'
+18:21:33 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbConnection: Executed Query: (Time ===> 0.0)
+         -     ___> SELECT * FROM RptPanel WHERE RptDefId=1246
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   DbConnection: Parsing for table names: SELECT * FROM RptPanel WHERE RptDefId=1246
+18:21:33 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Closing ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@412332'
+18:21:33 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Closing Statement 'oracle.jdbc.driver.OracleStatement@2a10fc'
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Panel Compiler: Host Generic Reports.Test0: view_hostgenericreports.PCTFREEINODES assumed to be 
+         -     from a VIEW
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Panel Compiler: Host Generic Reports.Test0: view_hostgenericreports.HOSTNAME assumed to be from 
+         -     a VIEW
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Panel Compiler: Host Generic Reports.Test0: view_hostgenericreports.FILESYSTEMNAME assumed to be 
+         -     from a VIEW
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Panel Compiler: Host Generic Reports.Test0: view_hostgenericreports.FILEPATH assumed to be from 
+         -     a VIEW
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Panel Compiler: Host Generic Reports.Test0: view_hostgenericreports.FILESYSTEMTYPE assumed to be 
+         -     from a VIEW
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Panel Compiler: Host Generic Reports.Test0: view_hostgenericreports.TOTALSPACE assumed to be 
+         -     from a VIEW
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Panel Compiler: Host Generic Reports.Test0: view_hostgenericreports.USEDSPACE assumed to be from 
+         -     a VIEW
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Panel Compiler: Host Generic Reports.Test0: view_hostgenericreports.FREESPACE assumed to be from 
+         -     a VIEW
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Panel Compiler: Host Generic Reports.Test0: view_hostgenericreports.PCTFREESPACE assumed to be 
+         -     from a VIEW
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Panel Compiler: Host Generic Reports.Test0: view_hostgenericreports.TOTALINODES assumed to be 
+         -     from a VIEW
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Panel Compiler: Host Generic Reports.Test0: view_hostgenericreports.USEDINODES assumed to be 
+         -     from a VIEW
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Panel Compiler: Host Generic Reports.Test0: view_hostgenericreports.FREEINODES assumed to be 
+         -     from a VIEW
+18:21:33 - SST@001I: May 29 Proc 1 Th 28:    Reports: Compiling report 'Host Volume/Disk Group Report'
+18:21:33 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Creating wrapper for Statement 'oracle.jdbc.driver.OracleStatement@6db492'
+18:21:33 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Creating wrapper for ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@69df00'
+18:21:33 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbConnection: Executed Query: (Time ===> 0.01)
+         -     ___> SELECT * FROM RptPanel WHERE RptDefId=1248
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   DbConnection: Parsing for table names: SELECT * FROM RptPanel WHERE RptDefId=1248
+18:21:33 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Closing ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@69df00'
+18:21:33 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Closing Statement 'oracle.jdbc.driver.OracleStatement@6db492'
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Panel Compiler: Host Volume/Disk Group Report.Test0: view_hostvolumediskgroup.PCTFREEKBYTE 
+         -     assumed to be from a VIEW
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Panel Compiler: Host Volume/Disk Group Report.Test0: view_hostvolumediskgroup.VOLUMEGROUPNAME 
+         -     assumed to be from a VIEW
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Panel Compiler: Host Volume/Disk Group Report.Test0: view_hostvolumediskgroup.VOLUMEGROUPID 
+         -     assumed to be from a VIEW
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Panel Compiler: Host Volume/Disk Group Report.Test0: view_hostvolumediskgroup.FREEKBYTE assumed 
+         -     to be from a VIEW
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Panel Compiler: Host Volume/Disk Group Report.Test0: view_hostvolumediskgroup.TOTALKBYTE assumed 
+         -     to be from a VIEW
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Panel Compiler: Host Volume/Disk Group Report.Test0: view_hostvolumediskgroup.USEDKBYTE assumed 
+         -     to be from a VIEW
+18:21:33 - SST@001I: May 29 Proc 1 Th 28:    Reports: Compiling report 'TSM Daily Summary Report'
+18:21:33 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Creating wrapper for Statement 'oracle.jdbc.driver.OracleStatement@2f8502'
+18:21:33 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Creating wrapper for ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@455aa8'
+18:21:33 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbConnection: Executed Query: (Time ===> 0.01)
+         -     ___> SELECT * FROM RptPanel WHERE RptDefId=1250
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   DbConnection: Parsing for table names: SELECT * FROM RptPanel WHERE RptDefId=1250
+18:21:33 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Closing ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@455aa8'
+18:21:33 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Closing Statement 'oracle.jdbc.driver.OracleStatement@2f8502'
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Panel Compiler: TSM Daily Summary Report.Test0: view_dailysummary.TSMINSTANCENAME assumed to be 
+         -     from a VIEW
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Panel Compiler: TSM Daily Summary Report.Test0: view_dailysummary.TOTALSTARTSES assumed to be 
+         -     from a VIEW
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Panel Compiler: TSM Daily Summary Report.Test0: view_dailysummary.MISSEDSCHEDULES assumed to be 
+         -     from a VIEW
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Panel Compiler: TSM Daily Summary Report.Test0: view_dailysummary.SESEXCEPTIONS assumed to be 
+         -     from a VIEW
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Panel Compiler: TSM Daily Summary Report.Test0: view_dailysummary.NUMBYTETRANSFER assumed to be 
+         -     from a VIEW
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Panel Compiler: TSM Daily Summary Report.Test0: view_dailysummary.NUMRECLAIM assumed to be from 
+         -     a VIEW
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Panel Compiler: TSM Daily Summary Report.Test0: view_dailysummary.NUMMIGRATION assumed to be 
+         -     from a VIEW
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Panel Compiler: TSM Daily Summary Report.Test0: view_dailysummary.NUMEXPIRATION assumed to be 
+         -     from a VIEW
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Panel Compiler: TSM Daily Summary Report.Test0: view_dailysummary.PCTDBUTILIZED assumed to be 
+         -     from a VIEW
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Panel Compiler: TSM Daily Summary Report.Test0: view_dailysummary.PCTDASDUSED assumed to be from 
+         -     a VIEW
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Panel Compiler: TSM Daily Summary Report.Test0: view_dailysummary.PCTTAPESAVAIL assumed to be 
+         -     from a VIEW
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Panel Compiler: TSM Daily Summary Report.Test0: view_dailysummary.LICENSESAVAIL assumed to be 
+         -     from a VIEW
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Panel Compiler: TSM Daily Summary Report.Test0: view_dailysummary.TSMINSTANCEID assumed to be 
+         -     from a VIEW
+18:21:33 - SST@001I: May 29 Proc 1 Th 28:    Reports: Compiling report 'TSM Server Archive Report'
+18:21:33 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Creating wrapper for Statement 'oracle.jdbc.driver.OracleStatement@43073a'
+18:21:33 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Creating wrapper for ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@facfb'
+18:21:33 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbConnection: Executed Query: (Time ===> 0.0)
+         -     ___> SELECT * FROM RptPanel WHERE RptDefId=1252
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   DbConnection: Parsing for table names: SELECT * FROM RptPanel WHERE RptDefId=1252
+18:21:33 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Closing ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@facfb'
+18:21:33 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Closing Statement 'oracle.jdbc.driver.OracleStatement@43073a'
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Panel Compiler: TSM Server Archive Report.Test0: view_serverops.TSMINSTANCEID assumed to be from 
+         -     a VIEW
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Panel Compiler: TSM Server Archive Report.Test0: view_serverops.STATDATELCL assumed to be from a 
+         -     VIEW
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Panel Compiler: TSM Server Archive Report.Test0: view_serverops.LOCALSTARTTIME assumed to be 
+         -     from a VIEW
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Panel Compiler: TSM Server Archive Report.Test0: view_serverops.NUMARCHIVEEND assumed to be from 
+         -     a VIEW
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Panel Compiler: TSM Server Archive Report.Test0: view_serverops.NUMRESTOREOBJ assumed to be from 
+         -     a VIEW
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Panel Compiler: TSM Server Archive Report.Test0: view_serverops.ARBYTETRANSFER assumed to be 
+         -     from a VIEW
+18:21:33 - SST@001I: May 29 Proc 1 Th 28:    Reports: Compiling report 'TSM Server Backup Report'
+18:21:33 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Creating wrapper for Statement 'oracle.jdbc.driver.OracleStatement@259490'
+18:21:33 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Creating wrapper for ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@3ca1c3'
+18:21:33 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbConnection: Executed Query: (Time ===> 0.0)
+         -     ___> SELECT * FROM RptPanel WHERE RptDefId=1254
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   DbConnection: Parsing for table names: SELECT * FROM RptPanel WHERE RptDefId=1254
+18:21:33 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Closing ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@3ca1c3'
+18:21:33 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Closing Statement 'oracle.jdbc.driver.OracleStatement@259490'
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Panel Compiler: TSM Server Backup Report.Test0: view_serverops.TSMINSTANCEID assumed to be from 
+         -     a VIEW
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Panel Compiler: TSM Server Backup Report.Test0: view_serverops.STATDATELCL assumed to be from a 
+         -     VIEW
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Panel Compiler: TSM Server Backup Report.Test0: view_serverops.LOCALSTARTTIME assumed to be from 
+         -     a VIEW
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Panel Compiler: TSM Server Backup Report.Test0: view_serverops.NUMBKEND assumed to be from a VIEW
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Panel Compiler: TSM Server Backup Report.Test0: view_serverops.NUMBKOBJ assumed to be from a VIEW
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Panel Compiler: TSM Server Backup Report.Test0: view_serverops.BKBYTETRANSFER assumed to be from 
+         -     a VIEW
+18:21:33 - SST@001I: May 29 Proc 1 Th 28:    Reports: Compiling report 'TSM Server Restore Report'
+18:21:33 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Creating wrapper for Statement 'oracle.jdbc.driver.OracleStatement@2022b7'
+18:21:33 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Creating wrapper for ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@474910'
+18:21:33 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbConnection: Executed Query: (Time ===> 0.01)
+         -     ___> SELECT * FROM RptPanel WHERE RptDefId=1256
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   DbConnection: Parsing for table names: SELECT * FROM RptPanel WHERE RptDefId=1256
+18:21:33 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Closing ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@474910'
+18:21:33 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Closing Statement 'oracle.jdbc.driver.OracleStatement@2022b7'
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Panel Compiler: TSM Server Restore Report.Test0: view_serverops.TSMINSTANCEID assumed to be from 
+         -     a VIEW
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Panel Compiler: TSM Server Restore Report.Test0: view_serverops.STATDATELCL assumed to be from a 
+         -     VIEW
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Panel Compiler: TSM Server Restore Report.Test0: view_serverops.LOCALSTARTTIME assumed to be 
+         -     from a VIEW
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Panel Compiler: TSM Server Restore Report.Test0: view_serverops.NUMRESTOREEND assumed to be from 
+         -     a VIEW
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Panel Compiler: TSM Server Restore Report.Test0: view_serverops.NUMRESTOREOBJ assumed to be from 
+         -     a VIEW
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Panel Compiler: TSM Server Restore Report.Test0: view_serverops.RSBYTETRANSFER assumed to be 
+         -     from a VIEW
+18:21:33 - SST@001I: May 29 Proc 1 Th 28:    Reports: Compiling report 'TSM Server Retrieve Report'
+18:21:33 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Creating wrapper for Statement 'oracle.jdbc.driver.OracleStatement@dfa76'
+18:21:33 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Creating wrapper for ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@3680c1'
+18:21:33 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbConnection: Executed Query: (Time ===> 0.01)
+         -     ___> SELECT * FROM RptPanel WHERE RptDefId=1258
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   DbConnection: Parsing for table names: SELECT * FROM RptPanel WHERE RptDefId=1258
+18:21:33 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Closing ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@3680c1'
+18:21:33 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Closing Statement 'oracle.jdbc.driver.OracleStatement@dfa76'
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Panel Compiler: TSM Server Retrieve Report.Test0: view_serverops.TSMINSTANCEID assumed to be 
+         -     from a VIEW
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Panel Compiler: TSM Server Retrieve Report.Test0: view_serverops.STATDATELCL assumed to be from 
+         -     a VIEW
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Panel Compiler: TSM Server Retrieve Report.Test0: view_serverops.LOCALSTARTTIME assumed to be 
+         -     from a VIEW
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Panel Compiler: TSM Server Retrieve Report.Test0: view_serverops.NUMRETRIEVEEND assumed to be 
+         -     from a VIEW
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Panel Compiler: TSM Server Retrieve Report.Test0: view_serverops.NUMRETRIEVEOBJ assumed to be 
+         -     from a VIEW
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Panel Compiler: TSM Server Retrieve Report.Test0: view_serverops.RTBYTETRANSFER assumed to be 
+         -     from a VIEW
+18:21:33 - SST@001I: May 29 Proc 1 Th 28:    Reports: Compiling report 'TSM Server Session Report'
+18:21:33 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Creating wrapper for Statement 'oracle.jdbc.driver.OracleStatement@145b95'
+18:21:33 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Creating wrapper for ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@8a6fc'
+18:21:33 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbConnection: Executed Query: (Time ===> 0.01)
+         -     ___> SELECT * FROM RptPanel WHERE RptDefId=1260
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   DbConnection: Parsing for table names: SELECT * FROM RptPanel WHERE RptDefId=1260
+18:21:33 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Closing ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@8a6fc'
+18:21:33 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Closing Statement 'oracle.jdbc.driver.OracleStatement@145b95'
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Panel Compiler: TSM Server Session Report.Test0: view_serversession.TSMINSTANCEID assumed to be 
+         -     from a VIEW
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Panel Compiler: TSM Server Session Report.Test0: view_serversession.STATSDATELCL assumed to be 
+         -     from a VIEW
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Panel Compiler: TSM Server Session Report.Test0: view_serversession.LOCALSTARTIME assumed to be 
+         -     from a VIEW
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Panel Compiler: TSM Server Session Report.Test0: view_serversession.NUUMBKEND assumed to be from 
+         -     a VIEW
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Panel Compiler: TSM Server Session Report.Test0: view_serversession.NUMRESTOREEND assumed to be 
+         -     from a VIEW
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Panel Compiler: TSM Server Session Report.Test0: view_serversession.NUMARCHIVEEND assumed to be 
+         -     from a VIEW
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Panel Compiler: TSM Server Session Report.Test0: view_serversession.NUMRETRIEVEEND assumed to be 
+         -     from a VIEW
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Panel Compiler: TSM Server Session Report.Test0: view_serversession.TOTALENDSES assumed to be 
+         -     from a VIEW
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Panel Compiler: TSM Server Session Report.Test0: view_serversession.SESEXCEPTIONS assumed to be 
+         -     from a VIEW
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Panel Compiler: TSM Server Session Report.Test0: view_serversession.AVGTHRUPUT assumed to be 
+         -     from a VIEW
+18:21:33 - SST@001I: May 29 Proc 1 Th 28:    Reports: Compiling report 'TSM Session Summary Report'
+18:21:33 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Creating wrapper for Statement 'oracle.jdbc.driver.OracleStatement@b1684'
+18:21:33 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Creating wrapper for ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@735e30'
+18:21:33 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbConnection: Executed Query: (Time ===> 0.01)
+         -     ___> SELECT * FROM RptPanel WHERE RptDefId=1262
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   DbConnection: Parsing for table names: SELECT * FROM RptPanel WHERE RptDefId=1262
+18:21:33 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Closing ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@735e30'
+18:21:33 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Closing Statement 'oracle.jdbc.driver.OracleStatement@b1684'
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Panel Compiler: TSM Session Summary Report.Test0: view_serversession.TSMINSTANCEID assumed to be 
+         -     from a VIEW
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Panel Compiler: TSM Session Summary Report.Test0: view_serversession.STATSDATELCL assumed to be 
+         -     from a VIEW
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Panel Compiler: TSM Session Summary Report.Test0: view_serversession.LOCALSTARTIME assumed to be 
+         -     from a VIEW
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Panel Compiler: TSM Session Summary Report.Test0: view_serversession.NUUMBKEND assumed to be 
+         -     from a VIEW
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Panel Compiler: TSM Session Summary Report.Test0: view_serversession.NUMRESTOREEND assumed to be 
+         -     from a VIEW
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Panel Compiler: TSM Session Summary Report.Test0: view_serversession.NUMARCHIVEEND assumed to be 
+         -     from a VIEW
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Panel Compiler: TSM Session Summary Report.Test0: view_serversession.NUMRETRIEVEEND assumed to 
+         -     be from a VIEW
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Panel Compiler: TSM Session Summary Report.Test0: view_serversession.SESEXCEPTIONS assumed to be 
+         -     from a VIEW
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Panel Compiler: TSM Session Summary Report.Test0: view_serversession.NUMBYTETRANSFER assumed to 
+         -     be from a VIEW
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Panel Compiler: TSM Session Summary Report.Test0: view_serversession.AVGTHRUPUT assumed to be 
+         -     from a VIEW
+18:21:33 - SST@001I: May 29 Proc 1 Th 28:    Reports: Compiling report 'TSM Storage Status Report'
+18:21:33 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Creating wrapper for Statement 'oracle.jdbc.driver.OracleStatement@2ccd65'
+18:21:33 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Creating wrapper for ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@60d16b'
+18:21:33 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbConnection: Executed Query: (Time ===> 0.01)
+         -     ___> SELECT * FROM RptPanel WHERE RptDefId=1264
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   DbConnection: Parsing for table names: SELECT * FROM RptPanel WHERE RptDefId=1264
+18:21:33 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Closing ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@60d16b'
+18:21:33 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Closing Statement 'oracle.jdbc.driver.OracleStatement@2ccd65'
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Panel Compiler: TSM Storage Status Report.Test0: view_storagestatus.PCTTAPESAVAIL assumed to be 
+         -     from a VIEW
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Panel Compiler: TSM Storage Status Report.Test0: view_storagestatus.TSMINSTANCEID assumed to be 
+         -     from a VIEW
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Panel Compiler: TSM Storage Status Report.Test0: view_storagestatus.STATSDATELOC assumed to be 
+         -     from a VIEW
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Panel Compiler: TSM Storage Status Report.Test0: view_storagestatus.PCTDBUTILIZED assumed to be 
+         -     from a VIEW
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Panel Compiler: TSM Storage Status Report.Test0: view_storagestatus.TOTALSTORAGE assumed to be 
+         -     from a VIEW
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Panel Compiler: TSM Storage Status Report.Test0: view_storagestatus.DASDUSED assumed to be from 
+         -     a VIEW
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Panel Compiler: TSM Storage Status Report.Test0: view_storagestatus.PCTDASDUSED assumed to be 
+         -     from a VIEW
+18:21:33 - SST@001I: May 29 Proc 3 Th 28:   
+         -   Panel Compiler: TSM Storage Status Report.Test0: view_storagestatus.TAPESAVAIL assumed to be 
+         -     from a VIEW
+18:21:34 - SST@001I: May 29 Proc 1 Th 32:   ReportsEventHandlerThread: Running thread
+18:21:34 - SST@001I: May 29 Init 1 Th 28:   DbServer: Compiling retentions package...
+18:21:34 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Creating wrapper for Statement 'oracle.jdbc.driver.OracleStatement@2a13a'
+18:21:34 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Creating wrapper for ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@2726b2'
+18:21:34 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbConnection: Executed Query: (Time ===> 0.0)
+         -     ___> SELECT * FROM Retention WHERE RetentionId>0
+18:21:34 - SST@001I: May 29 Proc 3 Th 28:   
+         -   DbConnection: Parsing for table names: SELECT * FROM Retention WHERE RetentionId>0
+18:21:34 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Closing ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@2726b2'
+18:21:34 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Closing Statement 'oracle.jdbc.driver.OracleStatement@2a13a'
+18:21:34 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Creating wrapper for Statement 'oracle.jdbc.driver.OracleStatement@1845fb'
+18:21:34 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Creating wrapper for ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@1a791f'
+18:21:34 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbConnection: Executed Query: (Time ===> 0.01)
+         -     ___> SELECT * FROM TableRule WHERE TableRuleId>0
+18:21:34 - SST@001I: May 29 Proc 3 Th 28:   
+         -   DbConnection: Parsing for table names: SELECT * FROM TableRule WHERE TableRuleId>0
+18:21:34 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Closing ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@1a791f'
+18:21:34 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Closing Statement 'oracle.jdbc.driver.OracleStatement@1845fb'
+18:21:34 - SST@001I: May 29 Init 1 Th 28:   
+         -   DbServer: INSTANCE retention pruning will occur every 14400 seconds
+18:21:34 - SST@001I: May 29 Proc 9 Th 28:   sstClientComm: Connecting to [127.0.0.1:5799] 
+18:21:35 - SST@001I: May 29 Proc 9 Th 28:   Created TCP client connection to host 127.0.0.1 on port 5799
+18:21:35 - SST@001I: May 29 Proc 9 Th 28:   
+         -   Write To: 127.0.0.1:5799 (3036) --> TS  SST_INITX   2001/05/29  18:21:35  2846  -1          
+         -     ABRUCE1444L:127.0.0.1:1124                                   127.0.0.1:127.0.0.1:5799          
+         -                                            03.34|DbTableBase|00.00|InitPacket|1.0|N|~|49|DBCOL|
+         -     01.00|InitPacket|InitPacketId|1.0|1|4|Y|N|Y|N|~|DBCOL|01.00|InitPacket|Name|1.0|2|255|N|N|N|Y|
+         -     ~|DBCOL|01.00|InitPacket|HostName|1.0|2|255|N|Y|N|Y|~|DBCOL|01.00|InitPacket|StoreName|1.0|2|
+         -     64|N|Y|N|Y|~|DBCOL|01.00|InitPacket|InternalName|1.0|2|10|N|Y|N|Y|~|DBCOL|01.00|InitPacket|
+         -     FileNamePrefix|1.0|2|12|N|Y|N|Y|~|DBCOL|01.00|InitPacket|CompClass|1.0|2|12|N|Y|N|Y|~|DBCOL|
+         -     01.00|InitPacket|Type|1.0|2|12|N|Y|N|Y|~|DBCOL|01.00|InitPacket|SubType|1.0|2|12|N|Y|N|Y|~|
+         -     DBCOL|01.00|InitPacket|Version|1.0|2|12|N|Y|N|Y|~|DBCOL|01.00|InitPacket|Status|1.0|2|20|N|Y|N|
+         -     Y|~|DBCOL|01.00|InitPacket|IPAddress|1.0|2|15|N|Y|N|Y|~|DBCOL|01.00|InitPacket|Port|1.0|1|4|N|
+         -     Y|N|Y|~|DBCOL|01.00|InitPacket|AlternatePort|1.0|1|4|N|Y|N|Y|~|DBCOL|01.00|InitPacket|
+         -     MultiHopAddress|1.0|2|50|N|Y|N|Y|~|DBCOL|01.00|InitPacket|Vendor|1.0|2|64|N|Y|N|Y|~|DBCOL|
+         -     01.00|InitPacket|Coordinator|1.0|2|1|N|Y|N|Y|~|DBCOL|01.00|InitPacket|Complex|1.0|2|20|N|Y|N|Y|
+         -     ~|DBCOL|01.00|InitPacket|CollectPri|1.0|2|1|N|Y|N|Y|~|DBCOL|01.00|InitPacket|ConnectsTo|1.0|2|
+         -     30|N|Y|N|Y|~|DBCOL|01.00|InitPacket|CommTime|1.0|1|4|N|Y|N|Y|~|DBCOL|01.00|InitPacket|
+         -     InstallDate|1.0|6|19|N|Y|N|Y|~|DBCOL|01.00|InitPacket|DataModel|1.0|2|12|N|Y|N|Y|~|DBCOL|01.00|
+         -     InitPacket|PID|1.0|1|4|N|Y|N|Y|~|DBCOL|01.00|InitPacket|HasAgent|1.0|2|1|N|Y|N|Y|~|DBCOL|01.00|
+         -     InitPacket|NodeName|1.0|2|128|N|Y|N|Y|~|DBCOL|01.00|InitPacket|PriIPAddress|1.0|2|128|N|Y|N|Y|
+         -     ~|DBCOL|01.00|InitPacket|SecIPAddress|1.0|2|128|N|Y|N|Y|~|DBCOL|01.00|InitPacket|HostVendor|
+         -     1.0|2|30|N|Y|N|Y|~|DBCOL|01.00|InitPacket|HostType|1.0|2|32|N|Y|N|Y|~|DBCOL|01.00|InitPacket|
+         -     SerialNum|1.0|2|30|N|Y|N|Y|~|DBCOL|01.00|InitPacket|GMTOffset|1.0|1|4|N|Y|N|Y|~|DBCOL|01.00|
+         -     InitPacket|UseDST|1.0|2|1|N|Y|N|Y|~|DBCOL|01.00|InitPacket|UseGMTRollup|1.0|2|1|N|Y|N|Y|~|
+         -     DBCOL|01.00|InitPacket|OSName|1.0|2|64|N|Y|N|Y|~|DBCOL|01.00|InitPacket|OSType|1.0|2|64|N|Y|N|
+         -     Y|~|DBCOL|01.00|InitPacket|OSVersion|1.0|2|64|N|Y|N|Y|~|DBCOL|01.00|InitPacket|OSLevel|1.0|2|
+         -     64|N|Y|N|Y|~|DBCOL|01.00|InitPacket|OSRelease|1.0|2|64|N|Y|N|Y|~|DBCOL|01.00|InitPacket|
+         -     OSClass|1.0|2|20|N|Y|N|Y|~|DBCOL|01.00|InitPacket|OSVendor|1.0|2|64|N|Y|N|Y|~|DBCOL|01.00|
+         -     InitPacket|HasSeedingAgent|1.0|2|1|N|Y|N|Y|~|DBCOL|01.00|InitPacket|ParentClass|1.0|2|10|N|Y|N|
+         -     Y|~|DBCOL|01.00|InitPacket|IsAlertReceiver|1.0|2|1|N|Y|N|Y|~|DBCOL|01.00|InitPacket|
+         -     ForceZipRefresh|1.0|2|1|N|Y|N|Y|~|DBCOL|01.00|InitPacket|ForceDMRefresh|1.0|2|1|N|Y|N|Y|~|
+         -     DBCOL|01.00|InitPacket|ForceXmlRefresh|1.0|2|1|N|Y|N|Y|~|DBCOL|01.00|InitPacket|ArchivePath|
+         -     1.0|2|128|N|Y|N|Y|~|DBCOL|01.00|InitPacket|PublishedReportsPath|1.0|2|128|N|Y|N|Y|~|~|1|31|N|4|
+         -     0||1|svrABRUCE1444L|1|ABRUCE1444L|1|<none>|0||0||0||1|Server|0||1|00.02.80|1|active|1|
+         -     127.0.0.1|1|5799|0||0||1|FOOBAR|0||0||0||1|svrABRUCE1444L|1|991174894|1|2001149 18:21:34|1|<unk>|
+         -     1|0|0||0||0||0||0||0||1|svrABRUCE1444L|~|
+18:21:35 - SST@001I: May 29 Proc 9 Th 36:   
+         -   Read From: 127.0.0.1:1124 (2048) --> TS  SST_INITX   2001/05/29  18:21:35  2846  -1          
+         -     ABRUCE1444L:127.0.0.1:1124                                   127.0.0.1:127.0.0.1:5799          
+         -                                            03.34|DbTableBase|00.00|InitPacket|1.0|N|~|49|DBCOL|
+         -     01.00|InitPacket|InitPacketId|1.0|1|4|Y|N|Y|N|~|DBCOL|01.00|InitPacket|Name|1.0|2|255|N|N|N|Y|
+         -     ~|DBCOL|01.00|InitPacket|HostName|1.0|2|255|N|Y|N|Y|~|DBCOL|01.00|InitPacket|StoreName|1.0|2|
+         -     64|N|Y|N|Y|~|DBCOL|01.00|InitPacket|InternalName|1.0|2|10|N|Y|N|Y|~|DBCOL|01.00|InitPacket|
+         -     FileNamePrefix|1.0|2|12|N|Y|N|Y|~|DBCOL|01.00|InitPacket|CompClass|1.0|2|12|N|Y|N|Y|~|DBCOL|
+         -     01.00|InitPacket|Type|1.0|2|12|N|Y|N|Y|~|DBCOL|01.00|InitPacket|SubType|1.0|2|12|N|Y|N|Y|~|
+         -     DBCOL|01.00|InitPacket|Version|1.0|2|12|N|Y|N|Y|~|DBCOL|01.00|InitPacket|Status|1.0|2|20|N|Y|N|
+         -     Y|~|DBCOL|01.00|InitPacket|IPAddress|1.0|2|15|N|Y|N|Y|~|DBCOL|01.00|InitPacket|Port|1.0|1|4|N|
+         -     Y|N|Y|~|DBCOL|01.00|InitPacket|AlternatePort|1.0|1|4|N|Y|N|Y|~|DBCOL|01.00|InitPacket|
+         -     MultiHopAddress|1.0|2|50|N|Y|N|Y|~|DBCOL|01.00|InitPacket|Vendor|1.0|2|64|N|Y|N|Y|~|DBCOL|
+         -     01.00|InitPacket|Coordinator|1.0|2|1|N|Y|N|Y|~|DBCOL|01.00|InitPacket|Complex|1.0|2|20|N|Y|N|Y|
+         -     ~|DBCOL|01.00|InitPacket|CollectPri|1.0|2|1|N|Y|N|Y|~|DBCOL|01.00|InitPacket|ConnectsTo|1.0|2|
+         -     30|N|Y|N|Y|~|DBCOL|01.00|InitPacket|CommTime|1.0|1|4|N|Y|N|Y|~|DBCOL|01.00|InitPacket|
+         -     InstallDate|1.0|6|19|N|Y|N|Y|~|DBCOL|01.00|InitPacket|DataModel|1.0|2|12|N|Y|N|Y|~|DBCOL|01.00|
+         -     InitPacket|PID|1.0|1|4|N|Y|N|Y|~|DBCOL|01.00|InitPacket|HasAgent|1.0|2|1|N|Y|N|Y|~|DBCOL|01.00|
+         -     InitPacket|NodeName|1.0|2|128|N|Y|N|Y|~|DBCOL|01.00|InitPacket|PriIPAddress|1.0|2|128|N|Y|N|Y|
+         -     ~|DBCOL|01.00|InitPacket|SecIPAddress|1.0|2|128|N|Y|N|Y|~|DBCOL|01.00|InitPacket|HostVendor|
+         -     1.0|2|30|N|Y|N|Y|~|DBCOL|01.00|InitPacket|HostType|1.0|2|32|N|Y|N|Y|~|DBCOL|01.00|InitPacket|
+         -     SerialNum|1.0|2|30|N|Y|N|Y|~|DBCOL|01.00|InitPacket|GMTOffset|1.0|1|4|N|Y|N|Y|~|DBCOL|01.00|
+         -     InitPacket|UseDST|1.0|2|1|N|Y|N|Y|~|DBCOL|01.00|InitPacket|UseGMTRollup|1.0|2|1|N|Y|N|Y|~|
+         -     DBCOL|01.00|InitPacket|OSName|1.0|2|64|N|Y|N|Y|~|DBCOL
+18:21:35 - SST@001I: May 29 Proc 9 Th 36:   
+         -   Read From: 127.0.0.1:1124 (988) --> |01.00|InitPacket|OSType|1.0|2|64|N|Y|N|Y|~|DBCOL|01.00|
+         -     InitPacket|OSVersion|1.0|2|64|N|Y|N|Y|~|DBCOL|01.00|InitPacket|OSLevel|1.0|2|64|N|Y|N|Y|~|
+         -     DBCOL|01.00|InitPacket|OSRelease|1.0|2|64|N|Y|N|Y|~|DBCOL|01.00|InitPacket|OSClass|1.0|2|20|N|
+         -     Y|N|Y|~|DBCOL|01.00|InitPacket|OSVendor|1.0|2|64|N|Y|N|Y|~|DBCOL|01.00|InitPacket|
+         -     HasSeedingAgent|1.0|2|1|N|Y|N|Y|~|DBCOL|01.00|InitPacket|ParentClass|1.0|2|10|N|Y|N|Y|~|DBCOL|
+         -     01.00|InitPacket|IsAlertReceiver|1.0|2|1|N|Y|N|Y|~|DBCOL|01.00|InitPacket|ForceZipRefresh|1.0|
+         -     2|1|N|Y|N|Y|~|DBCOL|01.00|InitPacket|ForceDMRefresh|1.0|2|1|N|Y|N|Y|~|DBCOL|01.00|InitPacket|
+         -     ForceXmlRefresh|1.0|2|1|N|Y|N|Y|~|DBCOL|01.00|InitPacket|ArchivePath|1.0|2|128|N|Y|N|Y|~|DBCOL|
+         -     01.00|InitPacket|PublishedReportsPath|1.0|2|128|N|Y|N|Y|~|~|1|31|N|4|0||1|svrABRUCE1444L|1|
+         -     ABRUCE1444L|1|<none>|0||0||0||1|Server|0||1|00.02.80|1|active|1|127.0.0.1|1|5799|0||0||1|FOOBAR|0|
+         -     |0||0||1|svrABRUCE1444L|1|991174894|1|2001149 18:21:34|1|<unk>|1|0|0||0||0||0||0||0||1|
+         -     svrABRUCE1444L|~|
+18:21:35 - SST@001I: May 29 Proc 2 Th 36:   
+         -   DbJdbcExecResult: Creating wrapper for Statement 'oracle.jdbc.driver.OracleStatement@55035a'
+18:21:35 - SST@001I: May 29 Proc 2 Th 36:   
+         -   DbJdbcExecResult: Creating wrapper for ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@4f3ba2'
+18:21:35 - SST@001I: May 29 Proc 2 Th 36:   
+         -   DbConnection: Executed Query: (Time ===> 0.0)
+         -     ___> SELECT Name, HostName FROM Component WHERE ParentClass='CTG'
+18:21:35 - SST@001I: May 29 Proc 3 Th 36:   
+         -   DbConnection: Parsing for table names: SELECT Name, HostName FROM Component WHERE 
+         -     ParentClass='CTG'
+18:21:35 - SST@001I: May 29 Proc 2 Th 36:   
+         -   DbJdbcExecResult: Closing ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@4f3ba2'
+18:21:35 - SST@001I: May 29 Proc 2 Th 36:   
+         -   DbJdbcExecResult: Closing Statement 'oracle.jdbc.driver.OracleStatement@55035a'
+18:21:35 - SST@001I: May 29 Proc 9 Th 36:   Created TCP client connection to host 127.0.0.1 on port 5799
+18:21:35 - SST@001I: May 29 Proc 9 Th 36:   
+         -   Write To: 127.0.0.1:5799 (190) --> TS  SST_STATUS  2001/05/29  18:21:35  0     -1          
+         -     ABRUCE1444L:127.0.0.1:1125                                   127.0.0.1:127.0.0.1:5799          
+         -                                            
+18:21:35 - SST@001I: May 29 Proc 9 Th 39:   
+         -   Read From: 127.0.0.1:1125 (190) --> TS  SST_STATUS  2001/05/29  18:21:35  0     -1          
+         -     ABRUCE1444L:127.0.0.1:1125                                   127.0.0.1:127.0.0.1:5799          
+         -                                            
+18:21:35 - SST@001I: May 29 Proc 9 Th 39:   
+         -   Write To: 127.0.0.1:0 (228) --> TE  SST_STATUS  2001/05/29  18:21:35  38    -1          
+         -     127.0.0.1:127.0.0.1:5799                                     ABRUCE1444L:127.0.0.1:1125        
+         -                                            svrABRUCE1444L|00.02.80|A License Code
+18:21:35 - SST@001I: May 29 Proc 9 Th 36:   
+         -   Read From: 127.0.0.1:5799 (228) --> TE  SST_STATUS  2001/05/29  18:21:35  38    -1          
+         -     127.0.0.1:127.0.0.1:5799                                     ABRUCE1444L:127.0.0.1:1125        
+         -                                            svrABRUCE1444L|00.02.80|A License Code
+18:21:35 - SST@001I: May 29 Proc 9 Th 36:   
+         -   Write To: 127.0.0.1:0 (241) --> TE  SST_INITX   2001/05/29  18:21:35  51    1302        
+         -     127.0.0.1:127.0.0.1:5799                                     ABRUCE1444L:127.0.0.1:1124        
+         -                                            NAKError Writing to store!
+		 IP=127.0.0.1|Port=5799|HostId=1290|ComponentId=1302
+18:21:35 - SST@001I: May 29 Proc 9 Th 28:   
+         -   Read From: 127.0.0.1:5799 (241) --> TE  SST_INITX   2001/05/29  18:21:35  51    1302        
+         -     127.0.0.1:127.0.0.1:5799                                     ABRUCE1444L:127.0.0.1:1124        
+         -                                            IP=127.0.0.1|Port=5799|HostId=1290|ComponentId=1302
+18:21:35 - SST@001I: May 29 Proc 1 Th 28:   
+         -   INIT returned: 'IP=127.0.0.1|Port=5799|HostId=1290|ComponentId=1302'
+18:21:35 - SST@001I: May 29 Proc 1 Th 28:   Set Session Data: '1302' 1290'
+18:21:35 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Creating wrapper for Statement 'oracle.jdbc.driver.OracleStatement@514f7f'
+18:21:35 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Creating wrapper for ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@3a5a9c'
+18:21:35 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbConnection: Executed Query: (Time ===> 0.01)
+         -     ___> SELECT Name FROM Tables WHERE Type='RnR'
+18:21:35 - SST@001I: May 29 Proc 3 Th 28:   
+         -   DbConnection: Parsing for table names: SELECT Name FROM Tables WHERE Type='RnR'
+18:21:35 - SST@001I: May 29 Proc 4 Th 28:   Server: Adding RnR table Component to lookup list.
+18:21:35 - SST@001I: May 29 Proc 4 Th 28:   Server: Adding RnR table FieldRule to lookup list.
+18:21:35 - SST@001I: May 29 Proc 4 Th 28:   Server: Adding RnR table Host to lookup list.
+18:21:35 - SST@001I: May 29 Proc 4 Th 28:   Server: Adding RnR table HostAClass to lookup list.
+18:21:35 - SST@001I: May 29 Proc 4 Th 28:   Server: Adding RnR table OpSys to lookup list.
+18:21:35 - SST@001I: May 29 Proc 4 Th 28:   Server: Adding RnR table Retention to lookup list.
+18:21:35 - SST@001I: May 29 Proc 4 Th 28:   Server: Adding RnR table SubSystems to lookup list.
+18:21:35 - SST@001I: May 29 Proc 4 Th 28:   Server: Adding RnR table TableRule to lookup list.
+18:21:35 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Closing ResultSet 'oracle.jdbc.driver.OracleResultSetImpl@3a5a9c'
+18:21:35 - SST@001I: May 29 Proc 2 Th 28:   
+         -   DbJdbcExecResult: Closing Statement 'oracle.jdbc.driver.OracleStatement@514f7f'
+18:21:36 - SST@001I: May 29 Proc 1 Th 28:   Waiting for sstListenerComm to be created...
+18:21:36 - SST@001I: May 29 Proc 1 Th 28:   sstListenerComm created
+18:21:38 - SST@001I: May 29 Proc 9 Th 43:   Created TCP client connection to host 127.0.0.1 on port 5799
+18:21:38 - SST@001I: May 29 Proc 9 Th 43:   
+         -   Write To: 127.0.0.1:5799 (204) --> TS  SST_STATUS  2001/05/29  18:21:38  14    1302        
+         -     ABRUCE1444L:127.0.0.1:1127                                   127.0.0.1:127.0.0.1:5799          
+         -                                            svrABRUCE1444L
+18:21:38 - SST@001I: May 29 Proc 9 Th 45:   
+         -   Read From: 127.0.0.1:1127 (204) --> TS  SST_STATUS  2001/05/29  18:21:38  14    1302        
+         -     ABRUCE1444L:127.0.0.1:1127                                   127.0.0.1:127.0.0.1:5799          
+         -                                            svrABRUCE1444L
+18:21:38 - SST@001I: May 29 Proc 9 Th 43:   
+         -   Write To: 127.0.0.1:5799 (204) --> TS  SST_STATUS  2001/05/29  18:21:38  14    1302        
+         -     ABRUCE1444L:127.0.0.1:1127                                   127.0.0.1:127.0.0.1:5799          
+         -                                            svrABRUCE1444L
+18:21:38 - SST@001I: May 29 Proc 9 Th 43:   
+         -   Read From: 127.0.0.1:5799 (228) --> TE  SST_STATUS  2001/05/29  18:21:38  38    1302        
+         -     127.0.0.1:127.0.0.1:5799                                     ABRUCE1444L:127.0.0.1:1127        
+         -                                            svrABRUCE1444L|00.02.80|A License Code
+18:21:38 - SST@001I: May 29 Proc 9 Th 45:   
+         -   Write To: 127.0.0.1:0 (228) --> TE  SST_STATUS  2001/05/29  18:21:38  38    1302        
+         -     127.0.0.1:127.0.0.1:5799                                     ABRUCE1444L:127.0.0.1:1127        
+         -                                            svrABRUCE1444L|00.02.80|A License Code
+18:21:38 - SST@001I: May 29 Proc 9 Th 43:   
+         -   Read From: 127.0.0.1:5799 (228) --> TE  SST_STATUS  2001/05/29  18:21:38  38    1302        
+         -     127.0.0.1:127.0.0.1:5799                                     ABRUCE1444L:127.0.0.1:1127        
+         -                                            svrABRUCE1444L|00.02.80|A License Code
+18:21:38 - SST@001I: May 29 Init 1 Th 27:   
+         -   DbMain: Daemon initialized on ABRUCE1444L [127.0.0.1:tcp:5799:voy:1]

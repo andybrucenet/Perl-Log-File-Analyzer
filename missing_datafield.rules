@@ -1,0 +1,71 @@
+# store vars
+[SHARED_CODE]
+DFIELD_STARTUP=                                                   \
+  $G_DFIELD_TOTAL = 0 ;                                           \
+  $G_DFIELD_GOOD = 0 ;                                            \
+  $G_DFIELD_BAD = 0 ;                                             \
+
+CONTROL_STARTUP=                                                  \
+  $G_CONTROL_BEGIN_TOTAL = 0 ;                                    \
+  $G_CONTROL_END_TOTAL = 0 ;                                      \
+  $G_CONTROL_MISMATCH_TOTAL = 0 ;                                 \
+  $G_CONTROL_PAIR_TOTAL = 0 ;                                     \
+
+[TERMINATION_CODE]
+DFIELD_TERM=                                                      \
+  print "\n" ;                                                    \
+  print "**\n" ;                                                  \
+  print  "DFIELD:\n" ;                                            \
+  print  "  TOTAL: $G_DFIELD_TOTAL\n" ;                           \
+  print  "  GOOD.: $G_DFIELD_GOOD\n" ;                            \
+  print  "  BAD..: $G_DFIELD_BAD\n" ;                             \
+  printf "  RATIO: %3.2f\n"                                       \
+    , 100.0 - $G_DFIELD_BAD / $G_DFIELD_GOOD ;                    \
+  print "\n" ;                                                    \
+
+CONTROL_TERM=                                                     \
+  print "\n" ;                                                    \
+  print "**\n" ;                                                  \
+  print  "CONTROL:\n" ;                                           \
+  print  "  BEGIN...: $G_CONTROL_BEGIN_TOTAL\n" ;                 \
+  print  "  END.....: $G_CONTROL_END_TOTAL\n" ;                   \
+  print  "  MISMATCH: $G_CONTROL_MISMATCH_TOTAL\n" ;              \
+  print  "  PAIRS...: $G_CONTROL_PAIR_TOTAL\n" ;                  \
+  print "\n" ;                                                    \
+
+[DFIELD_CHECK]
+BEGIN=^\s+<Control
+MATCH_TIMEOUT=1
+BEGIN=^\s+Type="AR.Field"
+MATCH_TIMEOUT=1
+BEGIN=^\s+Name="$$DFIELD_NAME([^"]+)
+OPTIONAL=^\s+DataField="$$DFIELD_DFIELD([^"]+)
+MATCH_TIMEOUT=10
+END=^\s+<\/Control>
+Action.COMPLETE=                                                  \
+  $DFIELD_NAME = "" if( !defined( $DFIELD_NAME ) ) ;              \
+  $DFIELD_DFIELD = "" if( !defined( $DFIELD_DFIELD ) ) ;          \
+	++$G_DFIELD_TOTAL ;                                             \
+  ++$G_DFIELD_GOOD if( $DFIELD_DFIELD ne "" ) ;                   \
+  ++$G_DFIELD_BAD if( $DFIELD_DFIELD eq "" ) ;                    \
+	if( $DFIELD_DFIELD eq "" ) {                                    \
+		print "$DFIELD_NAME @ $LINENUMBER_START\n" ;                  \
+	}                                                               \
+
+[CONTROL_BEGIN]
+BEGIN=^\s+<Control
+Action.COMPLETE=                                                  \
+  ++$G_CONTROL_BEGIN_TOTAL ;                                      \
+
+[CONTROL_END]
+BEGIN=^\s+<\/Control>
+Action.COMPLETE=                                                  \
+  ++$G_CONTROL_END_TOTAL ;                                        \
+
+[CONTROL_PAIR]
+BEGIN=^\s+<\/Control>
+MATCH_TIMEOUT=1
+END=^\s+<Control
+Action.COMPLETE=                                                  \
+  ++$G_CONTROL_PAIR_TOTAL ;                                       \
+

@@ -1,0 +1,618 @@
+########################################################################
+# sample_rules.ini
+# ABr, 5/31/01
+#
+# This is a sample "rules" file for use by the logengine.pl program.
+# You have a tremendous amount of flexibility available through this
+# script. You can basically program the logengine.pl application to do
+# almost anything you want!
+#
+# A rules file is geared toward working with a specific log file. The
+# examples shown below work with the file sample.log included with this
+# package.  You'll want to open this file in a separate window while you
+# work through this rules script.
+#
+# This rules files is divided into sections. Some sections (such as
+# "DEFINE_MACRO" or "TERMINATION_CODE" are pre-defined by the logengine
+# to do specific things. Most of the time, these sections are atomic
+# entities called a "rule".
+#
+########################################################################
+# Let's start with a pre-defined section--DEFINE_MACRO. We have a
+# demonstration section here:
+[DEFINE_MACRO]
+TIMESTAMP=([0-9]{2}:){2}[0-9]{2}
+DEBUGBEGIN=^$TIMESTAMP.*Th\s+
+IPADDR=([0-9]+\.){3}[0-9]+
+HDR_IPADDR=(($IPADDR)|([A-Za-z0-9_]+)):$IPADDR:[0-9]+
+#
+# A "macro" is simply text that you use to save typing later in the
+# file. The DEFINE_MACRO section you see above defines four macros.
+# These macros are called "TIMESTAMP", "DEBUGBEGIN", "IPADDR",
+# and "HDR_IPADDR". We'll look at each one in turn.
+#
+# First, you'll notice that these macros are defined using some funny
+# looking sequences. These sequences are called *regular expressions*
+# and allow you a tremendous amount of power for looking for text.
+# Regular expressions are a whole topic in themselves; I recommend
+# any of the following books:
+#   _Mastering Regular Expressions_, O'Reilly Press
+#    _Programming Perl_, O'Reilly Press
+#
+# Now let's see why we use the regular expressions we do:
+# TIMESTAMP - In the "sample_server.log" log file you'll notice that
+#   debugging lines start like this:
+#     18:21:38 - SST@001I: May 29 Proc 9 Th 43:
+#   Notice that the first element in the line is the time-of-day.
+#   The TIMESTAMP macro defines a regular expression that will match
+#   this format.
+# DEBUGBEGIN - In keeping with the above macro, every logical debugging
+#   line begins with the time-of-day, then white space, then a dash,
+#   more white space, the "SST@001I:" sequence, then the date, then
+#   the "Proc X" sequence, and finally a thread id. What the
+#   DEBUGBEGIN macro does is define a match when all the elements I
+#   just listed occur.
+# IPADDR - An IP address is always in the form "A.B.C.D" where the
+#   letters are (at most) 3-digit numbers. As an example, consider:
+#     192.168.0.1
+#     38.222.151.29
+#   Both the above are IP addresses. Both match to the regular
+#   expression listed above.
+# HDR_IPADDR - When reading the sample_server.log file, you'll
+#   notice on many lines an entry like:
+#     ABRUCE1444L:127.0.0.1:1127
+#   This entry consists of the host name, the IP address, and the
+#   port number. However, you'll also see lines containing:
+#     127.0.0.1:127.0.0.1:5799
+#   Note that this is same thing, except that the host name isn't
+#   (couldn't??) be resolved, so the IP address shows up twice.
+#   The regular expression solves for *both* these formats!
+#
+# *Why should I use a macro??*
+# ----------------------------
+# The answer lies in preventing errors. Regular expressions provide
+# tremendous power. They're also *very* easy to screw up. Consider
+# the HDR_IPADDR listed above. If you didn't use macros, you'd
+# have to type:
+#   ((([0-9]+\.){3}[0-9]+)|([A-Za-z0-9_]+)):([0-9]+\.){3}[0-9]+:[0-9]+
+# Ouch! Typing that is a good way to guarantee a quick trip to the
+# loony bin!
+#
+#
+########################################################################
+# One of the absolutely cool features of this log file analysis tool is
+# that you can WRITE YOUR OWN CODE IN IT! The magic of Perl allows you
+# to make the logfile.pl program do whatever you want!
+#
+# The logfile.pl program enables this feature by allowing you to write
+# "code particles". Basically, a code particle is a small set of Perl
+# code. So, yes, you must have a basic knowledge of Perl to use this
+# feature. If you need help, I recommend:
+#    _Programming Perl_, O'Reilly Press
+#
+# Let's start with the "Shared Code" section; this is code that should
+# run after the rules file(s) are completely parsed and validated, but
+# before any of the log file(s) get processed.
+[SHARED_CODE]
+SHARED_CODE_STARTUP=                                \
+  print "***Logfile program $0 is running...\n" ;   \
+  my $windir = ABR::os_getenv( "WINDIR" ) ;         \
+  print "Windows=", length( $windir )? "Yes": "No", \
+    "\n" ;                                          \
+  print "\n" ;
+#
+# Notice the above closely. We first use [SHARED_CODE] to tell
+# the logfile.pl program that we're defining code that should run
+# before any of the log file(s) get processed. We then define a single
+# code particle named "SHARED_CODE_STARTUP". So that we can keep the
+# code looking nicely formatted, we use a backslash at the end of each
+# line. This forces the logfile.pl program to continue reading the next
+# lines as though they were all on one line.
+#
+# The above code demonstrates lots of things. First of all, you see a
+# reference to "$0". "$0" is a special Perl variable that returns the
+# name of the currently running Perl script. What this should tell you
+# is that your code particles have *full access* to program variables
+# *and* functions in the logfile.pl program itself.
+#
+# Notice the call to "ABR::os_getenv". This is a special function
+# defined in the include/os.pl script. Once again,
+# you have a huge amount of functions you can execute. You can even
+# define your own functions (as you'll find out below!).
+#
+########################################################################
+# We've done SHARED_CODE, so let's move on to "Termination Code"--or
+# code that should execute when the logfile.pl program terminates.
+[TERMINATION_CODE]
+GLOBAL_WRAPUP_MSG=              \
+  print "\n" ;                  \
+  print "**\n" ;                \
+  print "***GLOBAL WRAPUP:\n" ;
+GLOBAL_FOO_MSG=                 \
+  print "**\n" ;
+#
+# We define two code particles: "GLOBAL_WRAPUP_MSG" and "GLOBAL_FOO_MSG".
+# Once again, we put the code on multiple lines to keep it looking
+# nice.
+#
+# The first code particle actually does something worthwhile. It
+# prints a message to grab the attention of the user. The second
+# code particle isn't really useful; I've included it so that you can
+# see how to put multiple code particles together.
+#
+# Keep in mind that the termination code *only* gets executed if
+# the script runs cleanly.
+#
+########################################################################
+# Including files
+# ---------------
+# After you go to the trouble of defining shared code (startup code)
+# and macros, and then termination code particles, you may naturally
+# balk at having to cut and paste these lines in other rule files you
+# create. Never fear, "INCLUDE=X" is here.
+#
+# Inside any section in a rules file, simply specify:
+#   [SOME_SECTION]
+#   INCLUDE=<relative or absolute file path>
+#
+# As an example, you could put this in your shared code (startup code)
+# section:
+#   [SHARED_CODE]
+#   INCLUDE=../include/my_macros.rules
+#
+# Note that you can nest includes as deeply as you want. This means that
+# "my_macros.rules" can itself include other files. Also, the log engine
+# automatically handles multiple includes of the same source file; only
+# the first include is honored. So, you C programmers don't need to
+# worry about any "#ifndef _H_FILE_DEFINED" type constructs.
+#
+########################################################################
+# Now for a real RULE. Keep in mind that rules are what this program is
+# all about! Basically, a rule defines a set of matching criteria that
+# allows you to identify specific situations.
+#
+# One common thing that goes wrong (and is easy to miss in the log
+# file!) is whether a node initializes correctly or not. Here's the
+# rule definition for the INITX rule, which should tell us whether any
+# nodes initializing to the sever had an error:
+[INITX]
+BEGIN=Read From.*TS\s+SST_INITX
+BEGIN=^\s+-\s+$HDR_IPADDR\s+$$INITX_SOURCE($HDR_IPADDR)\s*$
+END=Write To:.*TE\s+SST_INITX
+END=^\s+-\s+$$INITX_RESULT(NAK.*|IP.*)
+Action.COMPLETE=                                \
+  sub serverInitxOK {                           \
+    $arg = shift() ;                            \
+    if( $arg =~ /^NAK(.*)/i ) {                 \
+      return "FAILURE: $1" ;                    \
+    }                                           \
+    return "OK" ;                               \
+  }                                             \
+  print "INITX '$INITX_SOURCE' reported ",      \
+    serverInitxOK( $INITX_RESULT ),             \
+    "\n" ;
+Action.MISSING=print "INITX missing from log file\n"
+Action.INCOMPLETE=print "INITX incomplete\n"
+#
+# ***INITX RULE OVERVIEW***
+# -------------------------
+# Yes, there's a ton of stuff up there, so let's go over each item
+# carefully. The first thing you notice is that we have two
+# "BEGIN" entries. The BEGIN entries are special entries that must
+# exist for the match to occur. We have two BEGIN entries because
+# two separate lines in the INI file are required to determine all
+# information we need that an INITX is inbound:
+#
+# Here's the first line in the sample_server.log file that we need for
+# a match. It occurs at line 1726 in the sample log file:
+#   Read From: 127.0.0.1:1124 (2048) --> TS  SST_INITX   2001/05/29  18:21:35  2846  -1
+#
+# The above line provides us with notification that an INITX
+# (initialization) transaction arrived from a node. However, it doesn't
+# give us everything we need. Hence the second BEGIN line, which
+# matches to line 1727 from the log file:
+#   ABRUCE1444L:127.0.0.1:1124                                   127.0.0.1:127.0.0.1:5799
+#
+# The combination of the two lines gives us the information that we
+# need. The first line tells us an INITX occurred. The second line
+# tells us the remote node that issued the INITX (it's the second
+# entry on the line).
+#
+# ***BEGIN Statements***
+# ----------------------
+# Now let's talk about the BEGIN statements themselves, since they
+# aren't exactly intuitive!
+#   BEGIN=Read From.*TS\s+SST_INITX
+#
+# The above line has no macro references, so it's a plain regular
+# expression (like the macros presented at the top of this
+# document). The second BEGIN is a little more complicated:
+#   BEGIN=^\s+-\s+$HDR_IPADDR\s+$$INITX_SOURCE($HDR_IPADDR)\s*$
+#
+# The above line expands to a HUGE regular expression. I'll present
+# it here for completeness; I've wrapped it for ease of presentation:
+#   ^\s+-\s+((([0-9]+\.){3}[0-9]+)|([A-Za-z0-9_]+)):([0-9]+\.){3}
+#   [0-9]+:[0-9]+\s+(((([0-9]+\.){3}[0-9]+)|([A-Za-z0-9_]+)):
+#   ([0-9]+\.){3}[0-9]+:[0-9]+)\s*$
+#
+# Now the $64,000 question: why did the line expand that way? The
+# answer lies in resolving the macros. However, there's one thing
+# doesn't jive: what about that strange "$$INITX_SOURCE" entry?
+#
+# This brings up another feature of the logfile.pl script--you can
+# define match variables that get filled in as matches occur. So
+# what does that mean and why should you care? The answer is simple:
+# in the case of an INITX, we need to know when it terminates. Keep
+# in mind that multiple nodes could all be sending in INITX
+# transactions all at the same time. In the server.log file, this
+# results in the transactions being interspersed throughout the
+# log file. So it's very possible that we could end up with multiple
+# simultaneous INITX transactions being processed simultaneously!
+#
+# The net result is that to know when to end the match, we need to
+# have some way of extracting a unique identifier for the instance
+# of the match we're on. In the case of an INITX, the value:
+#   127.0.0.1:127.0.0.1:5799
+# is just what we want. It gets printed to the log file when a new
+# INITX transaction arrives, *and* it gets printed when the INITX
+# transaction terminates (regardless whether the INITX transaction
+# had an error during processing).
+#
+# The "$$INITX_SOURCE" is the magic that allows you to extract the
+# key value you need, and then you can reference it in other places
+# in the same rule. This segues nicely into a discussion of the END
+# entries.
+#
+# ***END Statements***
+# --------------------
+# The END entries serve to identify when a rule is completing.
+# In the case of the INITX transaction, once again we have multiple
+# lines that provide this signal. Look at lines 1794, 1795, and 1796.
+# These three lines provide the total information about the status of
+# the transaction:
+#   Write To: 127.0.0.1:0 (241) --> TE  SST_INITX   2001/05/29  18:21:35  51    1302
+#   127.0.0.1:127.0.0.1:5799                                     ABRUCE1444L:127.0.0.1:1124
+#   NAKError Writing to store!
+#
+# The first line indicates that the server is writing a response for an
+# INITX transaction, and matches to the first END statement. The
+# second line provides context information, and matches to the second
+# END statement. The third line provides the actual return status from
+# the server to the remote node.
+#
+# Note especially the second END. It takes the value we matched on from
+# the earlier second BEGIN. (Keep in mind that multiple INITX
+# transactions may be running simultaneously.)
+#
+# ***ACTION Statements***
+# -----------------------
+# A rule has three possible results:
+#   A. It completes, which means the BEGIN and END statements
+#      all matched.
+#   B. It didn't complete. This means we ran out of log file before
+#      we matched all BEGIN and END statements.
+#   C. A rule was specified in this file, but it never got popped.
+#
+# The logfile.pl program allows you to process each one of these
+# scenarios by way of the ACTION keyword. In the case of the INITX
+# rule, I've defined handlers for all three situations.
+#
+# Note especially the "Action.COMPLETE" handler, which gets fired when
+# all the BEGIN and END statements match. This handler defines a local
+# subroutine called "serverInitxOK". This subroutine looks at the
+# *actual status* matched from the last END statement, and tells the
+# user whether the INITX for the node in question was successful.
+#
+# (I purposely put the error message in the sample_server.log file
+# so that you can see how to program for errors!)
+#
+# The other two action handlers are very simple and don't require
+# detailed explanation.
+#
+########################################################################
+# Whew! The hard part is over with if you can understand the INITX rule
+# presented above. The next rule simply adds a few relatively simple
+# concepts to what you've already learned.
+[STATUS]
+PRE=${DEBUGBEGIN}$${STATUS_TID}([^:]+)
+BEGIN=Write To:.*TS\s+SST_STATUS
+BEGIN=^\s+-\s+$$STATUS_COMP_NAME([A-Za-z0-9_\.]+|)\s*$
+END=$DEBUGBEGIN$STATUS_TID
+END=Read From:.*TE\s+SST_STATUS
+END=^\s+-\s+($STATUS_COMP_NAME|[A-Za-z0-9_\.]+)\|$$STATUS_RESULT(.*)
+Action.COMPLETE=                                    \
+  sub statusOK {                                    \
+    $arg = shift() ;                                \
+    if( $arg =~ /^NAK(.*)/i ) {                     \
+      return "FAILURE: $1" ;                        \
+    }                                               \
+    return "OK--$arg" ;                             \
+  }                                                 \
+  print "STATUS for '$STATUS_COMP_NAME' reported ", \
+    statusOK( $STATUS_RESULT ),                     \
+    " @ $LINENUMBER_RANGE\n" ;
+#
+# ***STATUS RULE OVERVIEW***
+# --------------------------
+# The STATUS rule tracks all the STATUS commands sent by the server
+# to remote nodes, and reports their success or failure to the user.
+# The important new concept presented here is the "PRE" keyword.
+#
+# ***PRE Keyword***
+# -----------------
+# The STATUS command could've been solved just like the INITX command
+# above. In other words, locate the STATUS command (the first BEGIN)
+# and then extract the host/IP/port from the second BEGIN. However,
+# the PRE keyword allows you to get the same effect from a slightly
+# different angle.
+#
+# If you look closely at the PRE statement, you'll see that it matches
+# most of the lines in the sample_server.log file. The logfile.pl
+# program handles this by treating PRE matches as "potential" matches.
+# In other words, if a line matches to the PRE, and we already have
+# a match to the PRE, then we reuse the rule instance object in the
+# logfile.pl program. In other words: you don't end up with 752
+# STATUS objects simply because 752 lines match to the PRE data.
+#
+# The value of PRE comes into play when you need to get match
+# information from a prior match as part of the current rule.
+# In the case of STATUS, the "thread ID" is what we key on to
+# determine when a STATUS command is terminating. Since the
+# thread ID is on the line *prior* to the first BEGIN match,
+# the rule needs a way to access this data.
+#
+# Think of the PRE statements as allowing you to hold on to
+# data from previous lines. They are potential match objects rather
+# than instantiated match objects.
+#
+# ***Pre-defined Macros***
+# ------------------------
+# If you look carefully, you'll see the variable $LINENUMBER_RANGE
+# gets used in the Action.COMPLETE handler. This is a special macro
+# that gets maintained by the logfile.pl script for your benefit.
+# Whenever any of the ACTION handlers get invoked you can get:
+#   $LINENUMBER_START - the starting line number of the match
+#   $LINENUMBER_STOP - the ending line number of the match
+#   $LINENUMBER_RANGE - prints the beginning,ending line numbers
+#
+########################################################################
+#
+# ***"OPTIONAL" MATCHES
+# ---------------------
+# Sometimes, you want to match to items that may or may not be in the 
+# log. As an example, consider these log files from our sample log:
+#
+#18:21:35 - SST@001I: May 29 Proc 3 Th 28:   
+#         -   DbConnection: Parsing for table names: SELECT Name FROM Tables WHERE Type='RnR'
+#18:21:35 - SST@001I: May 29 Proc 4 Th 28:   Server: Adding RnR table Component to lookup list.
+#18:21:35 - SST@001I: May 29 Proc 4 Th 28:   Server: Adding RnR table FieldRule to lookup list.
+#18:21:35 - SST@001I: May 29 Proc 4 Th 28:   Server: Adding RnR table Host to lookup list.
+#18:21:35 - SST@001I: May 29 Proc 4 Th 28:   Server: Adding RnR table HostAClass to lookup list.
+#18:21:35 - SST@001I: May 29 Proc 4 Th 28:   Server: Adding RnR table OpSys to lookup list.
+#18:21:35 - SST@001I: May 29 Proc 4 Th 28:   Server: Adding RnR table Retention to lookup list.
+#18:21:35 - SST@001I: May 29 Proc 4 Th 28:   Server: Adding RnR table SubSystems to lookup list.
+#18:21:35 - SST@001I: May 29 Proc 4 Th 28:   Server: Adding RnR table TableRule to lookup list.
+#18:21:35 - SST@001I: May 29 Proc 2 Th 28: 
+#
+# These lines identify a particular type of match ("RnR" tables,
+# whatever they may be!). Just by looking at the examples, you should
+# be able to guess that the number of RnR tables will vary. So how can
+# you match to that?
+#
+# You have two different methods for matching: "ACCUM" entries and
+# "OPTIONAL" entries. (The difference between the two is subtle; for
+# the most part they do exactly the same thing.)
+#
+# --ACCUM Entries--
+# Here's a rule that demonstrates matching to the above using ACCUM:
+[ACCUM_MATCH]
+PRE=${DEBUGBEGIN}$${ACCUM_TID}([^:]+)
+BEGIN=^\s+-\s+DbConnection: Parsing for table names: SELECT\s      \
+  Name FROM Tables WHERE Type='RnR'
+BEGIN_ACCUM=$DEBUGBEGIN$ACCUM_TID:\s+Server: Adding RnR table\s    \
+  @@ACCUM_DATA([^ ]+)
+END=$DEBUGBEGIN$ACCUM_TID:\s*$
+ACTION.COMPLETE=                                                   \
+  print scalar( @ACCUM_DATA ), " tables found:\n" ;                \
+  foreach $table (@ACCUM_DATA) {                                   \
+    print "\t$table\n" ;                                           \
+  }
+#
+# ACCUM entries work by matching each accumulation in order. For
+# example, if you have two ACCUM entries in your rules:
+# a. The program matches zero or more lines to the first one
+# b. Once the first ACCUM matches, the program *never* matches
+#    to it again!
+#
+# --OPTIONAL Entries--
+# These entries work almost exactly like ACCUM entries, except that
+# the log engine compares *every* possible line against them. Thus,
+# if you have two OPTIONAL entries:
+# [SAMPLE OPTIONAL]
+# BEGIN=Hello
+# OPTIONAL=World
+# OPTIONAL=Yoho
+# END=Goodbye
+#
+# and you have a log file to scan like the following:
+# LINE 1: Hello
+# LINE 2: Yoho
+# LINE 3: World
+# LINE 4: Goodbye
+#
+# then *all* the lines match. (If you were using ACCUM instead, then
+# only the "World" entry would match.)
+#
+# Here's the same rule as above, coded using OPTIONAL:
+[OPTIONAL_MATCH]
+PRE=${DEBUGBEGIN}$${OPTIONAL_TID}([^:]+)
+BEGIN=^\s+-\s+DbConnection: Parsing for table names: SELECT\s       \
+  Name FROM Tables WHERE Type='RnR'
+BEGIN_ACCUM=$DEBUGBEGIN$OPTIONAL_TID:\s+Server: Adding RnR table\s  \
+  @@OPTIONAL_DATA([^ ]+)
+END=$DEBUGBEGIN$OPTIONAL_TID:\s*$
+ACTION.COMPLETE=                                                    \
+  print scalar( @OPTIONAL_DATA ), " tables found:\n" ;              \
+  foreach $table (@OPTIONAL_DATA) {                                 \
+    print "\t$table\n" ;                                            \
+  }
+#
+########################################################################
+#
+# ***MULTI-STATE MATCHES
+# ----------------------
+# Sometimes, you have more than one way to match to a given set of
+# lines. For example, some log file entries are all on a single lines.
+# Other entries are on multiple lines. While this is relatively easy
+# to solve *without* multi-state logic (since all new log lines start
+# with a well-known sequence), sometimes it's more difficult to express
+# multi-state matching.
+#
+# Multi-state matching basically uses a "pre-requisites" model. In
+# other words, it's possible to say "only start executing this match if
+# some other matches have executed". Plus, it's even possible to
+# "import" extracted data variables from the other (pre-requisite)
+# rules!
+#
+# As I said above, it's quite easy to tell how many logical lines we
+# have in a log file, with a match like this:
+# [SHARED_CODE]
+# COUNT_LINES_COUNTER=$count_lines_counter = 0 ;
+# [COUNT_LINES]
+# BEGIN=$TIMESTAMP
+# ACTION.COMPLETE=++$count_lines_counter ;
+# [TERMINATION_CODE]
+# COUNT_LINES_TERM=print "$count_lines_counter lines in file\n" ;
+#
+# Now, let's see how we can get the same result, but by using the
+# multi-state logic features of logengine.pl:
+[SHARED_CODE]
+MULTI_STATE_COUNTER=$multi_state_counter = 0 ;
+
+[MULTI_STATE_SINGLE_LINE]
+BEGIN=$$MULTI_STATE_TIMESTAMP(${DEBUGBEGIN})[^:]+:   .+$
+
+[MULTI_STATE_MULTI_LINE]
+BEGIN=$$MULTI_STATE_TIMESTAMP(${DEBUGBEGIN})[^:]+:   $
+END=$DEBUGBEGIN
+ACTION.INCOMPLETE=++$multi_state_counter ;
+
+[MULTI_STATE]
+MULTI_STATE_TIMESTAMP=<RTVAR>
+BEGIN_CODE=LOGENGINE_COMPARE_RULES_AND_IMPORT(              \
+  'MULTI_STATE_SINGLE_LINE', 'MULTI_STATE_MULTI_LINE' )
+action.complete=++$multi_state_counter ;
+
+[TERMINATION_CODE]
+MULTI_STATE_TERM=print "$multi_state_counter lines in file\n" ;
+#
+# The above code snippet works by allowing a match of *either* a single
+# or a multi-line log message. However, it demonstrates something you
+# might find confusing: the number of lines printed by the above rule
+# is always less than the actual number of logical lines in the file!
+# There's a good reason for this: the line that says:
+#   LOGENGINE_COMPARE_RULES_AND_IMPORT(
+#     'MULTI_STATE_SINGLE_LINE', 'MULTI_STATE_MULTI_LINE' )
+#
+# is the culprit. The logic the logengine uses is that if *any*
+# listed rule (and you can specify as many as you want) pops true,
+# then the multi-state rule gets created. However, consider three
+# lines from the log file we're processing:
+# 18:21:35 - SST@001I: May 29 Proc 3 Th 28:   
+#          -   DbConnection: Parsing for table names<...>
+# 18:21:35 - SST@001I: May 29 Proc 4 Th 28:
+#
+# The logengine's doing everything correctly here; what happens is
+# that on line 3 *both* the single- and multi-line matches evaluate
+# to true. That's because the single-line match evaluates to true
+# immediately upon reading the line. And the multi-line match
+# evaluates to true by virtue of the END statement. Since both
+# matches are true, the logengine takes the later match (the
+# single-line match) and uses it to create the multi-state match.
+#
+# One other thing to note is that you can "import" run-time data
+# from the prerequisite rules. Note that both rules define a
+# variable named MULTI_STATE_TIMESTAMP. And the multi-state
+# rule itself uses the special syntax:
+#   MULTI_STATE_TIMESTAMP=<RTVAR>
+#
+# This syntax says: "I'm using a variable named MULTI_STATE_TIMESTAMP
+# in my rule, but I'll make sure it's filled at run-time.". In
+# effect, it's a *promise* you make to the logengine that you'll
+# arrange for the variable to be set with a value later on.
+#
+# The magic command LOGENGINE_COMPARE_RULES_AND_IMPORT does this
+# work for you. You pass the list of rules you want to consider
+# as prerequisites, and the logengine determines which (if any)
+# of the rules allows you to go forward. The logengine also
+# imports *all* the run-time variables from the "winning" rule
+# into your current rule. Net effect: you get access to the
+# prerequisites data.
+#
+# While this example is somewhat naive, the multi-state logic
+# allows you to create extremely complex rule dependencies in a
+# simple way. Because each rule is self-contained, you can
+# specify a prerequisite rule which itself has prerequisites;
+# as deeply nested as you need. You don't have to worry about
+# coding AND/OR type logic in your rule matches, since you can
+# indicate many possible entry points that allow your rule to
+# pop.
+#
+########################################################################
+#
+# ***FUN STUFF***
+# ---------------
+# The remainder of this rules file simply defines two easy rules that
+# demonstrate how to perform global operations.
+#
+# Let's start by printing the total number of LOGICAL lines from the
+# sample_server.log file. To do that, we use the following:
+[SHARED_CODE]
+LOGICAL_LINE_VARIABLES=                     \
+  my $LOGICAL_LINE_COUNTER_VARIABLE = 0 ;
+
+[LOGICAL_LINE_COUNTER]
+BEGIN=$DEBUGBEGIN
+Action.COMPLETE=                            \
+  ++$LOGICAL_LINE_COUNTER_VARIABLE ;
+
+[TERMINATION_CODE]
+LOGICAL_LINE_TERMINATION =                  \
+  print "Number of logical lines: " .       \
+    "$LOGICAL_LINE_COUNTER_VARIABLE\n" ;
+#
+# A couple of notes here:
+# 1. SHARED_CODE - You can have as many of these sections as you want.
+#    They all get executed *before* the log file(s) begin to be
+#    parsed. In the example here, we simply define a global variable
+#    named $LOGICAL_LINE_COUNTER_VARIABLE and assign zero to it.
+# 2. SINGLE-LINE MATCHES - Note that the LOGICAL_LINE_COUNTER rule
+#    only has a BEGIN and an Action.COMPLETE defined for it. This is
+#    because any line that begins with:
+#      18:21:38 - SST@001I: May 29 Proc 9 Th 
+#    matches. And it just so happens that each logical debugging line
+#    in the sample_server.log file begins with this sequence. So, as
+#    soon as the logengine.pl program matches to one of these lines,
+#    it invokes the Action.COMPLETE handler.
+# 3. TERMINATION_CODE - Just like you can have multiple SHARED_CODE
+#    sections defined, you can have multiple TERMINATION_CODE sections
+#    defined. Each section gets executed when the logfile.pl program
+#    completes. In this case, we simply print the number of logical
+#    debug lines we read from the file.
+#
+# I'll leave it as an exercise for the reader to annotate the last
+# little section of this rules file!
+[SHARED_CODE]
+REPORT_VARIABLES=                              \
+  my $REPORT_COUNTER_VARIABLE = 0 ;
+
+[REPORT_COUNTER]
+BEGIN=SELECT \* FROM RptPanel WHERE RptDefId
+Action.COMPLETE=                               \
+  ++$REPORT_COUNTER_VARIABLE ;
+
+[TERMINATION_CODE]
+REPORT_TERMINATION=                            \
+  print "Number of reports: " .                \
+    "$REPORT_COUNTER_VARIABLE\n" ;
+

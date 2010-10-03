@@ -1,0 +1,35 @@
+# ex3_complexregex.rules
+# Copyright (c) 2001 Andy Bruce
+
+# TO RUN THIS RULE:
+# a. Change to the directory containing logengine.bat
+# b. Run "logengine.bat -r rules/ex3_complexregex.rules -l logengine.pl"
+# You should see the result:
+#   2632 lines began with a TAB
+#   93 lines ended with a PERIOD
+
+# This script demonstrates multiple rules being evaluated simultaneously
+#
+# As such, this example demonstrates functionality *NOT* easily
+# available through standard tools like "grep".
+#
+# Note that we make the variable declaration span multiple lines by
+# placing a backslash at the end of the line.
+[SHARED_CODE]
+complex_regex_vars=                                                         \ 
+  $complex_regex_linesBeginningWithATab ;                                   \
+  $complex_regex_linesEndingWithAPeriod ;
+
+[COMPLEX_REGEX_LINES_BEGINNING_WITH_A_TAB]
+BEGIN=^\t+
+Action.complete=++$complex_regex_linesBeginningWithATab ;
+
+[COMPLEX_REGEX_LINES_ENDING_WITH_A_PERIOD]
+BEGIN=\.+$
+Action.complete=++$complex_regex_linesEndingWithAPeriod ;
+
+[TERMINATION_CODE]
+complex_regex_term=                                                         \
+  print "$complex_regex_linesBeginningWithATab lines began with a TAB\n" ;  \
+  print "$complex_regex_linesEndingWithAPeriod lines ended with a PERIOD\n" ;
+

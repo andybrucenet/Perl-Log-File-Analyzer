@@ -1,0 +1,26 @@
+LOGENGINE Package Readme, 9SEP01
+--------------------------------
+Copyright (c) 2001-2005, Andy Bruce
+
+To use this package:
+1. You must have Perl installed. I strongly recommend the
+   Perl from ActiveState, at www.activestate.com.
+2. If you do *NOT* have UNIX tools installed on your machine,
+   copy the "pwd.bat" file to your Windows system directory.
+3. Copy all files to a directory of your choice.
+4. Read the "sample.rules" file to see how the logengine works.
+5. Run the logengine by using the supplied "logengine.bat" file.
+6. Play with the software! Use it to identify multi-line patterns
+   in your own log files. Or in *any* type of ASCII file.
+
+Be sure to look in the "rules" directory for a list of very simple
+rules that demonstrate some of the package features. Hopefully, you
+can use the rules as a cookbook for your own work.
+
+I'm interested to hear from folks who find this software useful.
+Feel free to drop me a line about the software and any suggestions
+you have for it at andy@softwareab.net. I don't promise to
+implement everything, but I certainly would like ideas on making
+the software easier to use.
+
+Thanks for using this package, and Happy Computing!
